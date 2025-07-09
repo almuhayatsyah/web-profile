@@ -1,27 +1,37 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  Twitter,
+} from "lucide-react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    alert('Message sent successfully!');
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    alert("Message sent successfully!");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -29,21 +39,21 @@ const Contact = () => {
     {
       icon: <Mail className="text-blue-600" size={24} />,
       title: "Email",
-      details: "johndoe@example.com",
-      link: "mailto:johndoe@example.com"
+      details: "almuhayats@gmail.com",
+      link: "mailto:almuhayats@gmail.com",
     },
     {
       icon: <Phone className="text-green-600" size={24} />,
       title: "Phone",
       details: "+62 812-3456-7890",
-      link: "tel:+6281234567890"
+      link: "tel:+6282165358189",
     },
     {
       icon: <MapPin className="text-red-600" size={24} />,
       title: "Location",
       details: "Jakarta, Indonesia",
-      link: "#"
-    }
+      link: "https://www.google.com/maps/place/AK+KUPI/@5.5914628,95.362062,750m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30403706d114f735:0x43a28f0099e6a083!8m2!3d5.5914628!4d95.3646369!16s%2Fg%2F11y4lvd0s5?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D",
+    },
   ];
 
   const socialLinks = [
@@ -51,31 +61,34 @@ const Contact = () => {
       icon: <Github size={24} />,
       name: "GitHub",
       link: "https://github.com",
-      color: "hover:text-gray-900"
+      color: "hover:text-gray-900",
     },
     {
       icon: <Linkedin size={24} />,
-      name: "LinkedIn", 
+      name: "LinkedIn",
       link: "https://linkedin.com",
-      color: "hover:text-blue-600"
+      color: "hover:text-blue-600",
     },
     {
       icon: <Twitter size={24} />,
       name: "Twitter",
       link: "https://twitter.com",
-      color: "hover:text-blue-400"
-    }
+      color: "hover:text-blue-400",
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-900"
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Get In <span className="text-blue-600">Touch</span>
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Mari berkolaborasi dan wujudkan ide digital Anda menjadi kenyataan
             </p>
           </div>
@@ -83,34 +96,40 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
                 Let's Start a Conversation
               </h3>
-              
+
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
-                  <a 
+                  <a
                     key={index}
                     href={info.link}
-                    className="flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     <div className="mr-4">{info.icon}</div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{info.title}</h4>
-                      <p className="text-gray-600">{info.details}</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                        {info.title}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        {info.details}
+                      </p>
                     </div>
                   </a>
                 ))}
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Me</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Follow Me
+                </h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.link}
-                      className={`p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 ${social.color}`}
+                      className={`p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 ${social.color}`}
                       title={social.name}
                     >
                       {social.icon}
@@ -121,15 +140,18 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Send Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name
                     </label>
                     <input
@@ -144,7 +166,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address
                     </label>
                     <input
@@ -161,7 +186,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -177,7 +205,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message
                   </label>
                   <textarea

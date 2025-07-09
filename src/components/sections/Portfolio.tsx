@@ -1,64 +1,85 @@
-import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github } from "lucide-react";
+import React from "react";
+import foto from "../../asset/img/foto.png";
+import fotoDua from "../../asset/img/fotoDua.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
-      description: "Platform e-commerce lengkap dengan payment gateway, inventory management, dan admin dashboard yang comprehensive.",
-      image: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Platform e-commerce lengkap dengan payment gateway, inventory management, dan admin dashboard yang comprehensive.",
+      image: foto,
       tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
       category: "Web Application",
-      featured: true
+      featured: true,
     },
     {
       title: "Task Management App",
-      description: "Aplikasi manajemen tugas dengan real-time collaboration, notifications, dan reporting dashboard.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Aplikasi manajemen tugas dengan real-time collaboration, notifications, dan reporting dashboard.",
+      image:
+        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["Vue.js", "Express", "MongoDB", "Socket.io"],
       category: "Productivity",
-      featured: true
+      featured: true,
     },
     {
       title: "Restaurant POS System",
-      description: "Sistem point of sale untuk restoran dengan menu management, order tracking, dan sales analytics.",
-      image: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Sistem point of sale untuk restoran dengan menu management, order tracking, dan sales analytics.",
+      image: fotoDua,
       tech: ["Next.js", "Python", "MySQL", "Redis"],
       category: "Business Solution",
-      featured: false
+      featured: false,
     },
     {
       title: "Learning Management System",
-      description: "Platform pembelajaran online dengan video streaming, quiz engine, dan progress tracking.",
-      image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Platform pembelajaran online dengan video streaming, quiz engine, dan progress tracking.",
+      image:
+        "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["React", "Django", "PostgreSQL", "AWS"],
       category: "Education",
-      featured: false
+      featured: false,
     },
     {
       title: "Social Media Dashboard",
-      description: "Dashboard analytics untuk mengelola multiple social media accounts dengan scheduling dan reporting.",
-      image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Dashboard analytics untuk mengelola multiple social media accounts dengan scheduling dan reporting.",
+      image:
+        "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["Angular", "Laravel", "MySQL", "Redis"],
       category: "Analytics",
-      featured: false
+      featured: false,
     },
     {
       title: "IoT Monitoring App",
-      description: "Aplikasi monitoring perangkat IoT dengan real-time data visualization dan alert system.",
-      image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description:
+        "Aplikasi monitoring perangkat IoT dengan real-time data visualization dan alert system.",
+      image:
+        "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800",
       tech: ["React", "Node.js", "InfluxDB", "MQTT"],
       category: "IoT Solution",
-      featured: true
-    }
+      featured: true,
+    },
   ];
 
-  const [filter, setFilter] = React.useState('all');
-  const categories = ['all', 'Web Application', 'Productivity', 'Business Solution', 'Education', 'Analytics', 'IoT Solution'];
-  
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+  const [filter, setFilter] = React.useState("all");
+  const categories = [
+    "all",
+    "Web Application",
+    "Productivity",
+    "Business Solution",
+    "Education",
+    "Analytics",
+    "IoT Solution",
+  ];
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -69,7 +90,8 @@ const Portfolio = () => {
               My <span className="text-blue-600">Portfolio</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Beberapa project yang telah saya kerjakan dengan berbagai teknologi dan industri
+              Beberapa project yang telah saya kerjakan dengan berbagai
+              teknologi dan industri
             </p>
 
             {/* Filter buttons */}
@@ -80,11 +102,11 @@ const Portfolio = () => {
                   onClick={() => setFilter(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
                     filter === category
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? "bg-blue-600 text-white shadow-lg"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
-                  {category === 'all' ? 'All Projects' : category}
+                  {category === "all" ? "All Projects" : category}
                 </button>
               ))}
             </div>
@@ -92,15 +114,15 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className={`group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                  project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                  project.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
@@ -123,7 +145,9 @@ const Portfolio = () => {
 
                 <div className="p-6">
                   <div className="mb-2">
-                    <span className="text-blue-600 text-sm font-medium">{project.category}</span>
+                    <span className="text-blue-600 text-sm font-medium">
+                      {project.category}
+                    </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {project.title}
@@ -133,7 +157,7 @@ const Portfolio = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
-                      <span 
+                      <span
                         key={techIndex}
                         className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
                       >
