@@ -8,11 +8,13 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                DevPortfolio
+                Almuhayats
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Passionate fullstack developer yang berdedikasi untuk
-                menciptakan solusi digital yang inovatif dan berdampak positif.
+                Fullstack developer yang berpengalaman membangun solusi digital
+                seperti CRM, GIS, E-Learning, dan Web Profile organisasi.
+                Terbiasa dengan pengembangan API, teamwork, dan teknologi
+                modern.
               </p>
             </div>
 
@@ -51,17 +53,28 @@ const Footer = () => {
                     Contact
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="#experience"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Experience
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <h4 className="text-lg font-semibold mb-4">Expertise</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Web Development</li>
-                <li>Mobile App Development</li>
-                <li>UI/UX Design</li>
-                <li>API Development</li>
-                <li>Technical Consulting</li>
+                <li>Fullstack Web Development</li>
+                <li>CRM System Development</li>
+                <li>Geographic Information System (GIS)</li>
+                <li>Web Portfolio</li>
+                <li>API & Backend Development</li>
+                <li>Team Collaboration</li>
+                <li>UI/UX Implementation</li>
+                <li>Database Design (MySQL, MongoDB, PostgreSQL)</li>
               </ul>
             </div>
           </div>

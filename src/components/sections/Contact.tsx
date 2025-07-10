@@ -5,7 +5,7 @@ import {
   MapPin,
   Phone,
   Send,
-  Twitter,
+  Instagram,
 } from "lucide-react";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -44,13 +44,13 @@ const Contact = () => {
     {
       icon: <Phone className="text-green-600" size={24} />,
       title: "Phone",
-      details: "+62 812-3456-7890",
-      link: "tel:+6282165358189",
+      details: "+62 1324-312-332",
+      link: "tel:+6281324312332",
     },
     {
       icon: <MapPin className="text-red-600" size={24} />,
       title: "Location",
-      details: "Jakarta, Indonesia",
+      details: "Aceh, Indonesia",
       link: "https://www.google.com/maps/place/AK+KUPI/@5.5914628,95.362062,750m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30403706d114f735:0x43a28f0099e6a083!8m2!3d5.5914628!4d95.3646369!16s%2Fg%2F11y4lvd0s5?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D",
     },
   ];
@@ -69,9 +69,9 @@ const Contact = () => {
       color: "hover:text-blue-600",
     },
     {
-      icon: <Twitter size={24} />,
-      name: "Twitter",
-      link: "https://twitter.com",
+      icon: <Instagram size={24} />,
+      name: "Instagram",
+      link: "https://instagram.com/almuhayatsyah_",
       color: "hover:text-blue-400",
     },
   ];
