@@ -8,6 +8,7 @@ import {
   Twitter,
 } from "lucide-react";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,9 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
-    // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" });
     alert("Message sent successfully!");
   };
@@ -78,34 +77,51 @@ const Contact = () => {
   ];
 
   return (
-    <section
+    <motion.section
       id="contact"
       className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-900"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Get In <span className="text-blue-600">Touch</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
               Mari berkolaborasi dan wujudkan ide digital Anda menjadi kenyataan
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
                 Let's Start a Conversation
               </h3>
 
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
-                  <a
+                  <motion.a
                     key={index}
                     href={info.link}
                     className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
                   >
                     <div className="mr-4">{info.icon}</div>
                     <div>
@@ -116,7 +132,7 @@ const Contact = () => {
                         {info.details}
                       </p>
                     </div>
-                  </a>
+                  </motion.a>
                 ))}
               </div>
 
@@ -126,21 +142,29 @@ const Contact = () => {
                 </h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
-                    <a
+                    <motion.a
                       key={index}
                       href={social.link}
                       className={`p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 ${social.color}`}
                       title={social.name}
+                      whileHover={{ scale: 1.15, rotate: 8 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       {social.icon}
-                    </a>
+                    </motion.a>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <motion.div
+              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Send Message
               </h3>
@@ -223,19 +247,21 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button
+                <motion.button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transform transition-all duration-200 flex items-center justify-center"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.97 }}
                 >
                   <Send size={20} className="mr-2" />
                   Send Message
-                </button>
+                </motion.button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

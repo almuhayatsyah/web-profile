@@ -1,88 +1,110 @@
-import { ExternalLink, Github } from "lucide-react";
-import React from "react";
-import foto from "../../asset/img/foto.png";
-import fotoDua from "../../asset/img/fotoDua.jpg";
+import { GithubIcon } from "lucide-react";
+import { useState } from "react";
+import crm from "../../asset/img/crm.png";
+import bem from "../../asset/img/bem.png";
+import gis from "../../asset/img/gis.png";
+import portfolio from "../../asset/img/portfolio.png";
 
 const Portfolio = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Costumer Relationship Management (CRM)",
       description:
-        "Platform e-commerce lengkap dengan payment gateway, inventory management, dan admin dashboard yang comprehensive.",
-      image: foto,
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      category: "Web Application",
+        "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang dilengkapi dengan fitur pencatatan interaksi & kunjungan, feedback layanan, notifikasi otomatis, serta dashboard admin & manajer yang komprehensif. Sistem ini juga mendukung laporan dinamis, ekspor data (PDF & Excel), dan kontrol akses berbasis role (admin, staff, manajer, pelanggan), serta terintegrasi dengan sistem pemantauan pemakaian daya pelanggan secara periodik.",
+      image: crm,
+      tech: ["Bootstrap 5", "vite", "Laravel 12", "Mysql"],
       featured: true,
+      github: "https://github.com/username/crm-project",
     },
     {
-      title: "Task Management App",
+      title: "CMS BEM FST",
       description:
-        "Aplikasi manajemen tugas dengan real-time collaboration, notifications, dan reporting dashboard.",
-      image:
-        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-      category: "Productivity",
+        "Website profil resmi Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi Universitas Ubudiyah Indonesia. Menyediakan fitur manajemen konten berita, agenda, galeri, dan struktur organisasi, serta dashboard admin untuk pengelolaan data secara dinamis.",
+      image: bem,
+      tech: ["codeigniter 4", "mysql", "Bootstrap 5"],
       featured: true,
+      github: "https://github.com/almuhayatsyah/WEB-BEM-FST-BUDIYAH",
     },
     {
-      title: "Restaurant POS System",
+      title: "GIS (Geographic Information System) Siswa Kurang Mampu",
       description:
-        "Sistem point of sale untuk restoran dengan menu management, order tracking, dan sales analytics.",
-      image: fotoDua,
-      tech: ["Next.js", "Python", "MySQL", "Redis"],
-      category: "Business Solution",
-      featured: false,
-    },
-    {
-      title: "Learning Management System",
-      description:
-        "Platform pembelajaran online dengan video streaming, quiz engine, dan progress tracking.",
-      image:
-        "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["React", "Django", "PostgreSQL", "AWS"],
-      category: "Education",
-      featured: false,
-    },
-    {
-      title: "Social Media Dashboard",
-      description:
-        "Dashboard analytics untuk mengelola multiple social media accounts dengan scheduling dan reporting.",
-      image:
-        "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["Angular", "Laravel", "MySQL", "Redis"],
-      category: "Analytics",
-      featured: false,
-    },
-    {
-      title: "IoT Monitoring App",
-      description:
-        "Aplikasi monitoring perangkat IoT dengan real-time data visualization dan alert system.",
-      image:
-        "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tech: ["React", "Node.js", "InfluxDB", "MQTT"],
-      category: "IoT Solution",
+        "Aplikasi pemetaan lokasi siswa kurang mampu berbasis web, memudahkan visualisasi dan analisis data penerima bantuan pendidikan secara geografis. Mendukung pencarian, filter data, dan integrasi peta interaktif.",
+      image: gis,
+      tech: ["Codeigniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
+      github: "https://github.com/username/gis-siswa-kurang-mampu",
+    },
+    {
+      title: "Web Portfolio",
+      description:
+        "Website portfolio pribadi yang menampilkan project, pengalaman, dan skill saya sebagai web developer. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
+      image: portfolio, // Ganti dengan path gambar asli jika ada
+      tech: ["React", "TailwindCSS"],
+      featured: true,
+      github: "https://github.com/almuhayatsyah/web-profile",
     },
   ];
 
-  const [filter, setFilter] = React.useState("all");
-  const categories = [
-    "all",
-    "Web Application",
-    "Productivity",
-    "Business Solution",
-    "Education",
-    "Analytics",
-    "IoT Solution",
-  ];
+  // Category & filter removed
+  const filteredProjects = projects;
 
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
+  // Modal state
+  const [selectedProject, setSelectedProject] = useState<
+    null | (typeof projects)[0]
+  >(null);
 
   return (
     <section id="portfolio" className="py-20 bg-white">
+      {/* Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+              onClick={() => setSelectedProject(null)}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+            <div className="flex flex-wrap gap-2 mb-3">
+              {selectedProject.tech.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <p className="text-gray-700 mb-4">{selectedProject.description}</p>
+            <div className="flex space-x-4">
+              {/* ExternalLink button bisa diarahkan ke demo jika ada */}
+              {/* <a
+                href={selectedProject.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <ExternalLink size={20} />
+              </a> */}
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <GithubIcon size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -94,22 +116,7 @@ const Portfolio = () => {
               teknologi dan industri
             </p>
 
-            {/* Filter buttons */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setFilter(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all duration-200 ${
-                    filter === category
-                      ? "bg-blue-600 text-white shadow-lg"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
-                >
-                  {category === "all" ? "All Projects" : category}
-                </button>
-              ))}
-            </div>
+            {/* Filter buttons removed */}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,6 +126,8 @@ const Portfolio = () => {
                 className={`group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                   project.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
+                onClick={() => setSelectedProject(project)}
+                style={{ cursor: "pointer" }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -133,22 +142,30 @@ const Portfolio = () => {
                   )}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
-                      <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors">
+                      {/* ExternalLink button bisa diarahkan ke demo jika ada */}
+                      {/* <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                        onClick={e => e.stopPropagation()}
+                      >
                         <ExternalLink size={20} />
-                      </button>
-                      <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors">
-                        <Github size={20} />
-                      </button>
+                      </a> */}
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <GithubIcon size={20} />
+                      </a>
                     </div>
                   </div>
                 </div>
-
                 <div className="p-6">
-                  <div className="mb-2">
-                    <span className="text-blue-600 text-sm font-medium">
-                      {project.category}
-                    </span>
-                  </div>
+                  {/* Category removed */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
