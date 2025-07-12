@@ -85,9 +85,17 @@ const Footer = () => {
                 © 2025 Almuhayatsyah. All rights reserved.
               </p>
               <div className="flex items-center text-gray-400 text-sm">
-                <span>Made with</span>
+                <span>Made</span>
                 <Heart size={16} className="mx-2 text-red-500" />
-                <span>in Indonesia</span>
+                <span>
+                  made in {""}
+                  <a
+                    href="https://www.indonesia.go.id"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Indonesia
+                  </a>
+                </span>
               </div>
             </div>
           </div>

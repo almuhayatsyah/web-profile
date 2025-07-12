@@ -47,8 +47,10 @@ const About = () => {
               About <span className="text-blue-600">Me</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Fullstack Developer yang antusias dengan teknologi dan
-              pengembangan web.
+              Fullstack Developer yang berpengalaman membangun berbagai solusi
+              digital seperti CRM, GIS, CMS organisasi, dan Web Portfolio.
+              Terbiasa mengembangkan aplikasi end-to-end, mulai dari desain
+              antarmuka, backend, hingga integrasi API dan deployment.
             </p>
           </motion.div>
 
@@ -61,18 +63,19 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Saya memiliki pengalaman lebih dari lima tahun di pengembangan
-                web, mulai dari proyek startup hingga sistem berskala besar.
-                Saya terbiasa mengerjakan aplikasi dari sisi frontend maupun
-                backend, dengan perhatian pada kualitas dan efisiensi. Saya
-                percaya solusi digital yang baik harus mudah digunakan dan dapat
-                diandalkan.
+                Saya telah mengerjakan project seperti sistem CRM untuk
+                manajemen pelanggan prioritas, CMS organisasi mahasiswa,
+                aplikasi GIS untuk pemetaan data sosial, hingga platform
+                E-Learning. Setiap project saya kerjakan dengan fokus pada
+                kebutuhan pengguna, keamanan data, dan kemudahan maintenance.
               </p>
 
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Keahlian saya meliputi pengembangan aplikasi end-to-end, dari
-                desain antarmuka hingga backend. Saya senang mempelajari hal
-                baru dan terus mengikuti perkembangan teknologi.
+                Saya terbiasa bekerja dalam tim lintas disiplin, mengelola
+                kolaborasi dengan tools modern, serta selalu mengutamakan clean
+                code dan dokumentasi yang baik. Saya juga aktif mempelajari
+                teknologi baru untuk meningkatkan kualitas solusi yang saya
+                bangun.
               </p>
 
               <div className="pt-4">
@@ -82,19 +85,20 @@ const About = () => {
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Berpengalaman dengan teknologi terbaru
+                    Berpengalaman membangun CRM, GIS, CMS, dan Portfolio dari
+                    nol
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Mengutamakan kualitas dan best practices
+                    Menguasai pengembangan API, database, dan integrasi sistem
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Komunikasi yang baik dalam tim
+                    Kolaboratif, komunikatif, dan terbiasa kerja tim
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Selalu belajar dan mengikuti tren teknologi
+                    Selalu update dengan teknologi dan best practice terbaru
                   </li>
                 </ul>
               </div>
