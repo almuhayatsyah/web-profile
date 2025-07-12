@@ -1,132 +1,122 @@
-# **Portofolio Pengembang Fullstack Profesional**
+# **Portofolio Almuhayats – Fullstack Developer**
 
-Sebuah situs web portofolio modern dan responsif yang dibangun dengan React, TypeScript, dan Tailwind CSS.
+Situs web portofolio modern dan responsif yang menampilkan pengalaman, keahlian, dan project nyata seperti CRM, GIS, CMS organisasi, dan E-Learning. Dibangun dengan React, TypeScript, dan Tailwind CSS.
 
-## **🚀 Fitur**
+## **🚀 Fitur Unggulan**
 
-* **Desain Modern**: Desain yang bersih dan profesional dengan animasi yang halus  
-* **Responsif**: Desain yang sepenuhnya responsif dan berfungsi di semua perangkat  
-* **Interaktif**: Navigasi gulir yang mulus dan elemen interaktif  
-* **Performa**: Dioptimalkan untuk pemuatan cepat dan performa yang lancar  
-* **TypeScript**: Dukungan TypeScript penuh untuk pengalaman pengembangan yang lebih baik  
-* **Modular**: Struktur komponen yang tertata rapi untuk kemudahan pemeliharaan
+- **Desain Modern & Animasi**: UI profesional dengan animasi halus (Framer Motion)
+- **Responsif**: Tampilan optimal di semua perangkat
+- **Interaktif**: Navigasi smooth scroll, modal project, dark mode toggle
+- **Performa**: Optimasi loading (spinner), lazy load gambar
+- **TypeScript**: Kode aman dan maintainable
+- **Modular**: Struktur komponen rapi, mudah dikembangkan
 
-## **🛠️ Tumpukan Teknologi**
+## **🛠️ Stack Teknologi**
 
-* **Frontend**: React 18, TypeScript  
-* **Styling**: Tailwind CSS  
-* **Ikon**: Lucide React  
-* **Alat Build**: Vite  
-* **Linting**: ESLint
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Animasi**: Framer Motion
+- **Ikon**: Lucide React, React Icons
+- **Build Tool**: Vite
+- **Linting**: ESLint
 
 ## **📁 Struktur Proyek**
 
-src/  
-├── components/  
-│   ├── layout/  
-│   │   ├── Header.tsx  
-│   │   └── Footer.tsx  
-│   └── sections/  
-│       ├── Hero.tsx  
-│       ├── About.tsx  
-│       ├── Skills.tsx  
-│       ├── Portfolio.tsx  
-│       ├── Experience.tsx  
-│       └── Contact.tsx  
-├── types/  
-│   └── index.ts  
-├── utils/  
-│   ├── constants.ts  
-│   └── helpers.ts  
-├── App.tsx  
-├── main.tsx  
+```text
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── sections/
+│       ├── Hero.tsx
+│       ├── About.tsx
+│       ├── Skills.tsx
+│       ├── Portfolio.tsx
+│       ├── Experience.tsx
+│       └── Contact.tsx
+├── asset/
+│   └── img/
+│       ├── crm.png
+│       ├── bem.png
+│       ├── gis.png
+│       └── sertifikat.jpg
+├── App.tsx
+├── main.tsx
 └── index.css
+```
 
-## **🎨 Bagian**
+## **🎨 Bagian Utama**
 
-1. **Hero**: Bagian pendaratan dengan pengantar dan ajakan bertindak  
-2. **Tentang**: Informasi pribadi dan sorotan  
-3. **Keahlian**: Keahlian teknis dengan indikator kemajuan  
-4. **Portofolio**: Showcase proyek dengan pemfilteran  
-5. **Pengalaman**: Garis waktu pengalaman kerja  
-6. **Kontak**: Formulir kontak dan informasi
+1. **Hero**: Intro singkat & ajakan bertindak
+2. **About**: Profil, pengalaman, dan keunggulan
+3. **Skills**: Keahlian teknis (PHP, Laravel, JS, API, Database, dsb)
+4. **Portfolio**: Showcase project nyata (CRM, GIS, CMS, E-Learning)
+5. **Experience**: Pengalaman magang/kerja (PLN UID Aceh)
+6. **Contact**: Formulir & info kontak
 
-## **🚀 Memulai**
+## **🚀 Cara Menjalankan**
 
-1. **Instal dependensi**:  
+1. **Install dependensi**
+   ```bash
    npm install
-
-2. **Mulai server pengembangan**:  
+   ```
+2. **Jalankan server development**
+   ```bash
    npm run dev
-
-3. **Bangun untuk produksi**:  
+   ```
+3. **Build untuk produksi**
+   ```bash
    npm run build
+   ```
 
 ## **📝 Kustomisasi**
 
-### **Informasi Pribadi**
-
-Perbarui file-file berikut dengan informasi Anda:
-
-* src/components/sections/Hero.tsx \- Nama dan pengantar  
-* src/components/sections/About.tsx \- Konten bagian Tentang  
-* src/components/sections/Experience.tsx \- Pengalaman kerja  
-* src/components/sections/Contact.tsx \- Informasi kontak  
-* src/utils/constants.ts \- Detail kontak dan tautan sosial
-
-### **Proyek**
-
-Perbarui src/components/sections/Portfolio.tsx dengan proyek-proyek Anda:
-
-* Tambahkan gambar proyek ke folder public atau gunakan URL eksternal  
-* Perbarui deskripsi proyek, teknologi, dan tautan
-
-### **Keahlian**
-
-Ubah src/components/sections/Skills.tsx untuk mencerminkan tingkat keahlian dan teknologi Anda.
+- **Profil & Hero**: Ubah di `src/components/sections/Hero.tsx` dan `About.tsx`
+- **Project**: Edit/isi project di `src/components/sections/Portfolio.tsx` (tambahkan gambar di `asset/img`)
+- **Keahlian**: Update skill di `src/components/sections/Skills.tsx`
+- **Pengalaman**: Edit pengalaman di `src/components/sections/Experience.tsx`
+- **Kontak**: Ubah info/form di `src/components/sections/Contact.tsx`
 
 ## **🎯 Fitur Performa**
 
-* Lazy loading untuk gambar  
-* Navigasi gulir yang mulus  
-* Animasi yang dioptimalkan  
-* Desain responsif  
-* Struktur yang ramah SEO
+- Lazy loading gambar project
+- Modal detail project
+- Smooth scroll navigation
+- Dark/light mode
+- SEO friendly structure
 
-## **📱 Desain Responsif**
+## **📱 Responsif**
 
-Portofolio ini sepenuhnya responsif dan telah diuji pada:
+Sudah diuji di:
 
-* Desktop (1920px+)  
-* Laptop (1024px \- 1919px)  
-* Tablet (768px \- 1023px)  
-* Seluler (320px \- 767px)
+- Desktop
+- Laptop
+- Tablet
+- Mobile
 
 ## **🔧 Pengembangan**
 
-### **Skrip yang Tersedia**
+### **Skrip**
 
-* npm run dev \- Mulai server pengembangan  
-* npm run build \- Bangun untuk produksi  
-* npm run preview \- Pratinjau build produksi  
-* npm run lint \- Jalankan ESLint
+- `npm run dev` – Jalankan development server
+- `npm run build` – Build untuk produksi
+- `npm run preview` – Preview hasil build
+- `npm run lint` – Cek kualitas kode
 
 ### **Gaya Kode**
 
-Proyek ini menggunakan:
-
-* ESLint untuk linting kode  
-* TypeScript untuk pemeriksaan tipe  
-* Pemformatan yang kompatibel dengan Prettier
+- ESLint & Prettier
+- TypeScript strict mode
 
 ## **📄 Lisensi**
 
-Proyek ini adalah sumber terbuka dan tersedia di bawah [Lisensi MIT](http://docs.google.com/LICENSE).
+MIT License
 
 ## **🤝 Kontribusi**
 
-Kontribusi, masalah, dan permintaan fitur dipersilakan\!
+Kontribusi, issue, dan saran sangat terbuka!
 
-## **📞 Dukungan**
+## **📞 Kontak & Dukungan**
 
-Jika Anda memiliki pertanyaan atau membutuhkan bantuan dalam menyesuaikan portofolio, jangan ragu untuk menghubungi\!
+Jika ada pertanyaan atau ingin kerja sama, silakan hubungi melalui email atau LinkedIn yang tertera di halaman kontak.
