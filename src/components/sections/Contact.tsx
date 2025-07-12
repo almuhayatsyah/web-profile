@@ -1,38 +1,10 @@
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Instagram,
-} from "lucide-react";
-import React, { useState } from "react";
+import { Github, Linkedin, Mail, MapPin, Phone, Instagram } from "lucide-react";
+
 import { motion } from "framer-motion";
+// ...existing code...
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    alert("Message sent successfully!");
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // Form dan handler dihapus karena tidak digunakan lagi
 
   const contactInfo = [
     {
@@ -44,7 +16,7 @@ const Contact = () => {
     {
       icon: <Phone className="text-green-600" size={24} />,
       title: "Phone",
-      details: "+62 1324-312-332",
+      details: "+62-8132-4312-332",
       link: "tel:+6281324312332",
     },
     {
@@ -69,7 +41,7 @@ const Contact = () => {
       color: "hover:text-blue-600",
     },
     {
-      icon: <Instagram size={24} />,
+      icon: <Instagram size={24} />, // perbaiki di sini
       name: "Instagram",
       link: "https://instagram.com/almuhayatsyah_",
       color: "hover:text-blue-400",
@@ -102,24 +74,23 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
+          <div className="max-w-xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-                Let's Start a Conversation
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                Contact Information
               </h3>
-
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
                   <motion.a
                     key={index}
                     href={info.link}
-                    className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="flex items-center p-4 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -135,17 +106,16 @@ const Contact = () => {
                   </motion.a>
                 ))}
               </div>
-
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
                   Follow Me
                 </h4>
-                <div className="flex space-x-4">
+                <div className="flex justify-center space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.link}
-                      className={`p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 ${social.color}`}
+                      className={`p-3 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-gray-600 dark:text-gray-300 ${social.color}`}
                       title={social.name}
                       whileHover={{ scale: 1.15, rotate: 8 }}
                       whileTap={{ scale: 0.95 }}
@@ -155,108 +125,6 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
-
-            {/* Contact Form */}
-            <motion.div
-              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Send Message
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="Project Discussion"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                    placeholder="Tell me about your project..."
-                  ></textarea>
-                </div>
-
-                <motion.button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transform transition-all duration-200 flex items-center justify-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  <Send size={20} className="mr-2" />
-                  Send Message
-                </motion.button>
-              </form>
             </motion.div>
           </div>
         </div>
