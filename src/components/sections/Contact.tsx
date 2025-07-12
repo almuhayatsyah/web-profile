@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // ...existing code...
 
 const Contact = () => {
-  // Form dan handler dihapus karena tidak digunakan lagi
+  // Form dan handler dihapus karena tidak digunakan lagigit
 
   const contactInfo = [
     {
