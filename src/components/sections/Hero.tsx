@@ -1,5 +1,6 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 import pdf from "../../asset/pdf/cv.pdf";
+import profileImg from "../../asset/img/profile.jpg";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -18,7 +19,12 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="animate-fade-in-up">
+        <div className="animate-fade-in-up flex flex-col items-center">
+          <img
+            src={profileImg}
+            alt="Almuhayatsyah"
+            className="w-36 h-36 rounded-full object-cover border-4 border-blue-400 shadow-lg mb-6"
+          />
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             Web-Dev{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -63,6 +69,15 @@ const Hero = () => {
               className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-blue-600"
             >
               <Mail size={24} />
+            </a>
+            <a
+              href="https://wa.me/6281324312332"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-600 dark:text-green-400 hover:text-green-700"
+              title="WhatsApp"
+            >
+              <Phone size={24} />
             </a>
           </div>
         </div>
