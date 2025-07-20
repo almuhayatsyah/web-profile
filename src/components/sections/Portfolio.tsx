@@ -4,6 +4,7 @@ import crm from "../../asset/img/crm.png";
 import bem from "../../asset/img/bem.png";
 import gis from "../../asset/img/gis.png";
 import portfolio from "../../asset/img/portfolio.png";
+import mabelkanto from "../../asset/img/mabel-kanto.png"; // Ganti dengan path gambar asli jika ada
 
 const Portfolio = () => {
   const projects = [
@@ -38,10 +39,19 @@ const Portfolio = () => {
       title: "Web Portfolio",
       description:
         "Website portfolio pribadi yang menampilkan project, pengalaman, dan skill saya sebagai web developer. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
-      image: portfolio, // Ganti dengan path gambar asli jika ada
+      image: portfolio,
       tech: ["React", "TailwindCSS"],
       featured: true,
       github: "https://github.com/almuhayatsyah/web-profile",
+    },
+    {
+      title: "Mabel Kanto",
+      description:
+        "Website profil Mabel Kanto, Adalah Website Profile Company .",
+      image: mabelkanto,
+      tech: ["React", "TailwindCSS"],
+      featured: true,
+      github: "https://web-profile-kanto-mabel.vercel.app/",
     },
   ];
 
