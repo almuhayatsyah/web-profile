@@ -4,7 +4,7 @@ import crm from "../../asset/img/crm.png";
 import bem from "../../asset/img/bem.png";
 import gis from "../../asset/img/gis.png";
 import portfolio from "../../asset/img/portfolio.png";
-import mabelkanto from "../../asset/img/mabel-kanto.png"; // Ganti dengan path gambar asli jika ada
+import mabelkanto from "../../asset/img/mabel-kanto.png";
 
 const Portfolio = () => {
   const projects = [
@@ -13,7 +13,7 @@ const Portfolio = () => {
       description:
         "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang dilengkapi dengan fitur pencatatan interaksi & kunjungan, feedback layanan, notifikasi otomatis, serta dashboard admin & manajer yang komprehensif. Sistem ini juga mendukung laporan dinamis, ekspor data (PDF & Excel), dan kontrol akses berbasis role (admin, staff, manajer, pelanggan), serta terintegrasi dengan sistem pemantauan pemakaian daya pelanggan secara periodik.",
       image: crm,
-      tech: ["Bootstrap 5", "vite", "Laravel 12", "Mysql"],
+      tech: ["Bootstrap 5", "vite", "React", "Laravel 12", "Mysql"],
       featured: true,
       github: "https://github.com/username/crm-project",
     },
