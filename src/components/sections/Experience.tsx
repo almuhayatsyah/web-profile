@@ -91,18 +91,22 @@ const Experience = () => {
                   </div>
 
                   {/* Sertifikat Card */}
+                  {/* Sertifikat Card */}
                   <div className="mt-6">
                     <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 flex flex-col items-center shadow">
-                      <img
-                        src={sertifikat}
-                        alt="Sertifikat Magang PLN"
-                        className="w-full max-w-xs rounded-lg mb-2"
-                      />
+                      <a href={sertifikat} download="Sertifikat-PLN.jpg">
+                        <img
+                          src={sertifikat}
+                          alt="Sertifikat Magang PLN"
+                          className="w-full max-w-xs rounded-lg mb-2 cursor-pointer hover:opacity-80 transition"
+                        />
+                      </a>
                       <span className="text-sm text-gray-700 dark:text-gray-200">
                         Sertifikat Magang - PT PLN UID ACEH
                       </span>
                     </div>
                   </div>
+
                   {/* End Sertifikat Card */}
                 </div>
               </div>
