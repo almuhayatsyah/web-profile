@@ -1,10 +1,12 @@
-import { GithubIcon } from "lucide-react";
+import { Github } from "lucide-react";
 import { useState } from "react";
 import crm from "../../asset/img/crm.png";
 import bem from "../../asset/img/bem.png";
 import gis from "../../asset/img/gis.png";
 import portfolio from "../../asset/img/portfolio.png";
 import mabelkanto from "../../asset/img/mabel-kanto.png";
+import redesain from "../../asset/img/redesain.png";
+import visualisasi from "../../asset/img/visualisasi.png";
 
 const Portfolio = () => {
   const projects = [
@@ -50,6 +52,25 @@ const Portfolio = () => {
         "Website profil Mabel Kanto, Adalah Website Profile Company .",
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
+      featured: true,
+      github: "https://web-profile-kanto-mabel.vercel.app/",
+    },
+
+    {
+      title: "Redesain Website Profile UKM",
+      description:
+        "Saya Redesain ulang Aplikasi Sigupai Jek dari ABDYA, saya membuat tampilan lebih moderen agar menyesuaikan dengan tampilan Aplikasi sekarang.",
+      image: redesain,
+      tech: ["Figma"],
+      featured: true,
+      github: "https://web-profile-kanto-mabel.vercel.app/",
+    },
+    {
+      title: "Visualisasi Data Sosial Ekonomi",
+      description:
+        "visualisasi data sosial ekonomi menggunkan Looker Studio, memudahkan analisis dan interpretasi data melalui grafik interaktif. Cocok untuk presentasi data kepada pemangku kepentingan.",
+      image: visualisasi,
+      tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
@@ -109,7 +130,7 @@ const Portfolio = () => {
                 rel="noopener noreferrer"
                 className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
               >
-                <GithubIcon size={20} />
+                <Github size={20} />
               </a>
             </div>
           </div>
@@ -146,7 +167,7 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   {project.featured && (
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute top-5 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Featured
                     </div>
                   )}
@@ -169,7 +190,7 @@ const Portfolio = () => {
                         className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <GithubIcon size={20} />
+                        <Github size={20} />
                       </a>
                     </div>
                   </div>
