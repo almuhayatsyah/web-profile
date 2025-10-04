@@ -7,11 +7,14 @@ import portfolio from "../../asset/img/portfolio.png";
 import mabelkanto from "../../asset/img/mabel-kanto.png";
 import redesain from "../../asset/img/redesain.png";
 import visualisasi from "../../asset/img/visualisasi.png";
+import kopimeri from "../../asset/img/kopimeri.png";
+import pmi from "../../asset/img/pmi.png";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "Costumer Relationship Management (CRM)",
+      category: "Website",
       description:
         "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang dilengkapi dengan fitur pencatatan interaksi & kunjungan, feedback layanan, notifikasi otomatis, serta dashboard admin & manajer yang komprehensif. Sistem ini juga mendukung laporan dinamis, ekspor data (PDF & Excel), dan kontrol akses berbasis role (admin, staff, manajer, pelanggan), serta terintegrasi dengan sistem pemantauan pemakaian daya pelanggan secara periodik.",
       image: crm,
@@ -21,6 +24,7 @@ const Portfolio = () => {
     },
     {
       title: "CMS BEM FST",
+      category: "Website",
       description:
         "Website profil resmi Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi Universitas Ubudiyah Indonesia. Menyediakan fitur manajemen konten berita, agenda, galeri, dan struktur organisasi, serta dashboard admin untuk pengelolaan data secara dinamis.",
       image: bem,
@@ -30,6 +34,7 @@ const Portfolio = () => {
     },
     {
       title: "GIS (Geographic Information System) Siswa Kurang Mampu",
+      category: "Website",
       description:
         "Aplikasi pemetaan lokasi siswa kurang mampu berbasis web, memudahkan visualisasi dan analisis data penerima bantuan pendidikan secara geografis. Mendukung pencarian, filter data, dan integrasi peta interaktif.",
       image: gis,
@@ -39,6 +44,7 @@ const Portfolio = () => {
     },
     {
       title: "Web Portfolio",
+      category: "Website",
       description:
         "Website portfolio pribadi yang menampilkan project, pengalaman, dan skill saya sebagai web developer. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
       image: portfolio,
@@ -48,6 +54,7 @@ const Portfolio = () => {
     },
     {
       title: "Mabel Kanto",
+      category: "Website",
       description:
         "Website profil Mabel Kanto, Adalah Website Profile Company .",
       image: mabelkanto,
@@ -58,6 +65,7 @@ const Portfolio = () => {
 
     {
       title: "Redesain Website Profile UKM",
+      category: "Design-UI/UX",
       description:
         "Saya Redesain ulang Aplikasi Sigupai Jek dari ABDYA, saya membuat tampilan lebih moderen agar menyesuaikan dengan tampilan Aplikasi sekarang.",
       image: redesain,
@@ -67,6 +75,7 @@ const Portfolio = () => {
     },
     {
       title: "Visualisasi Data Sosial Ekonomi",
+      category: "Data Visualization",
       description:
         "visualisasi data sosial ekonomi menggunkan Looker Studio, memudahkan analisis dan interpretasi data melalui grafik interaktif. Cocok untuk presentasi data kepada pemangku kepentingan.",
       image: visualisasi,
@@ -74,10 +83,35 @@ const Portfolio = () => {
       featured: true,
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
+
+    {
+      title: "design product kopimeri",
+      category: "Design-UI/UX",
+      description: "design product Hair Tonic dengan nama Kopi Meri",
+      image: kopimeri,
+      tech: ["Figma"],
+      featured: true,
+      github: "https://web-profile-kanto-mabel.vercel.app/",
+    },
+    {
+      title: "Website Profile PMI Aceh",
+      category: "design-UI/UX",
+      description:
+        "design Aplikasi Mobile Donor darah Dari PMI Aceh Barat Daya ",
+      image: pmi,
+      tech: ["Figma"],
+      featured: true,
+      github: "https://web-profile-kanto-mabel.vercel.app/",
+    },
   ];
 
-  // Category & filter removed
-  const filteredProjects = projects;
+  // Filter state
+  const [activeCategory, setActiveCategory] = useState("Semua");
+  const categories = ["Semua", "Design-UI/UX", "Website", "Data Visualization"];
+  const filteredProjects =
+    activeCategory === "Semua"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   // Modal state
   const [selectedProject, setSelectedProject] = useState<
@@ -100,7 +134,7 @@ const Portfolio = () => {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
+              className="w-full max-h-80 sm:max-h-96 object-contain rounded-lg mb-4"
             />
             <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
             <div className="flex flex-wrap gap-2 mb-3">
@@ -115,15 +149,6 @@ const Portfolio = () => {
             </div>
             <p className="text-gray-700 mb-4">{selectedProject.description}</p>
             <div className="flex space-x-4">
-              {/* ExternalLink button bisa diarahkan ke demo jika ada */}
-              {/* <a
-                href={selectedProject.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
-              >
-                <ExternalLink size={20} />
-              </a> */}
               <a
                 href={selectedProject.github}
                 target="_blank"
@@ -146,8 +171,23 @@ const Portfolio = () => {
               Beberapa project yang telah saya kerjakan dengan berbagai
               teknologi dan industri
             </p>
-
-            {/* Filter buttons removed */}
+            <div className="flex flex-wrap gap-4 justify-center mb-8">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2 rounded-full font-semibold border transition-colors duration-200
+                    ${
+                      activeCategory === cat
+                        ? "bg-blue-600 text-white border-blue-600"
+                        : "bg-white text-blue-600 border-blue-600"
+                    }
+                  `}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -164,7 +204,7 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full max-h-48 sm:max-h-56 object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                   {project.featured && (
                     <div className="absolute top-5 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">

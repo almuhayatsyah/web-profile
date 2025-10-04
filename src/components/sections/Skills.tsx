@@ -1,46 +1,49 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Backend & PHP Frameworks",
-      color: "from-purple-500 to-pink-500",
+      title: "Backend & Database",
+      color: "from-blue-500 to-purple-500",
       skills: [
-        { name: "PHP", level: 95 },
-        { name: "Laravel", level: 92 },
-        { name: "CodeIgniter", level: 88 },
-        { name: "REST API", level: 85 },
+        { name: "PHP", level: 90 },
+        { name: "Laravel", level: 85 },
+        { name: "CodeIgniter", level: 80 },
+        { name: "REST API", level: 80 },
         { name: "OOP & MVC", level: 85 },
-      ],
-    },
-    {
-      title: "Frontend & Javascript",
-      color: "from-blue-500 to-cyan-500",
-      skills: [
-        { name: "JavaScript", level: 90 },
-        { name: "HTML5 / CSS3", level: 90 },
-        { name: "Bootstrap", level: 85 },
-        { name: "jQuery", level: 80 },
-        { name: "Tailwind CSS", level: 75 },
-      ],
-    },
-    {
-      title: "Database",
-      color: "from-emerald-500 to-teal-500",
-      skills: [
-        { name: "MySQL", level: 92 },
-        { name: "phpMyAdmin", level: 85 },
+        { name: "MySQL", level: 85 },
         { name: "Database Design", level: 80 },
         { name: "Query Optimization", level: 75 },
       ],
     },
     {
-      title: "Tools & Others",
-      color: "from-orange-500 to-red-500",
+      title: "Frontend & UI/UX",
+      color: "from-purple-500 to-blue-500",
       skills: [
-        { name: "Git / GitHub", level: 90 },
-        { name: "Postman", level: 85 },
-        { name: "XAMPP", level: 80 },
+        { name: "React", level: 85 },
+        { name: "JavaScript", level: 85 },
+        { name: "HTML5 / CSS3", level: 90 },
+        { name: "Bootstrap", level: 85 },
+        { name: "Tailwind CSS", level: 80 },
+        { name: "Figma", level: 80 },
+        { name: "UI/UX Design", level: 80 },
+      ],
+    },
+    {
+      title: "Data Visualization & Tools",
+      color: "from-green-400 to-blue-400",
+      skills: [
+        { name: "Looker Studio", level: 80 },
+        { name: "Google Sheets", level: 80 },
+        { name: "Excel", level: 80 },
+      ],
+    },
+    {
+      title: "Collaboration & Workflow",
+      color: "from-blue-400 to-purple-400",
+      skills: [
+        { name: "Git / GitHub", level: 85 },
+        { name: "Postman", level: 80 },
         { name: "Linux Basic", level: 75 },
-        { name: "Agile / Scrum", level: 70 },
+        { name: "Agile / Scrum", level: 80 },
       ],
     },
   ];
