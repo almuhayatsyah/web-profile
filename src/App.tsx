@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import About from "./components/sections/About";
@@ -7,8 +7,8 @@ import Experience from "./components/sections/Experience";
 import Hero from "./components/sections/Hero";
 import Portfolio from "./components/sections/Portfolio";
 
-import Skills from "./components/sections/Skills";
 import { ClipLoader } from "react-spinners";
+import Skills from "./components/sections/Skills";
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     // Simulasi loading, ganti sesuai kebutuhan (misal: fetch data)
-    const timer = setTimeout(() => setLoading(false), 1900);
+    const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
   }, []);
 

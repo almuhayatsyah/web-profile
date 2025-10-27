@@ -1,6 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
-import pdf from "../../asset/pdf/cv.pdf";
 import profileImg from "../../asset/img/profile.jpg";
+import pdf from "../../asset/pdf/cv.pdf";
 
 const Hero = () => {
   const scrollToAbout = () => {

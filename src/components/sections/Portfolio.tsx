@@ -1,14 +1,14 @@
 import { Github } from "lucide-react";
 import { useState } from "react";
-import crm from "../../asset/img/crm.png";
-import bem from "../../asset/img/bem.png";
-import gis from "../../asset/img/gis.png";
-import portfolio from "../../asset/img/portfolio.png";
+import bem from "../../asset/img/bem.jpg";
+import crm from "../../asset/img/crm.jpg";
+import gis from "../../asset/img/gis.jpg";
 import mabelkanto from "../../asset/img/mabel-kanto.png";
-import redesain from "../../asset/img/redesain.png";
+import portfolio from "../../asset/img/portfolio.png";
+import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
-import kopimeri from "../../asset/img/kopimeri.png";
-import pmi from "../../asset/img/pmi.png";
+// import kopimeri from "../../asset/img/kopimeri.png";
+import pmi from "../../asset/img/pmi.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -84,15 +84,15 @@ const Portfolio = () => {
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
 
-    {
-      title: "design product kopimeri",
-      category: "Design-UI/UX",
-      description: "design product Hair Tonic dengan nama Kopi Meri",
-      image: kopimeri,
-      tech: ["Figma"],
-      featured: true,
-      github: "https://web-profile-kanto-mabel.vercel.app/",
-    },
+    // {
+    //   title: "design product kopimeri",
+    //   category: "Design-UI/UX",
+    //   description: "design product Hair Tonic dengan nama Kopi Meri",
+    //   image: kopimeri,
+    //   tech: ["Figma"],
+    //   featured: true,
+    //   github: "https://web-profile-kanto-mabel.vercel.app/",
+    // },
     {
       title: "Website Profile PMI Aceh",
       category: "design-UI/UX",
