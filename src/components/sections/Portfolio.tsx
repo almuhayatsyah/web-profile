@@ -1,14 +1,14 @@
 import { Github } from "lucide-react";
 import { useState } from "react";
 import bem from "../../asset/img/bem.jpg";
+import bubur from "../../asset/img/bubur-jongkong.jpg";
 import crm from "../../asset/img/crm.jpg";
 import gis from "../../asset/img/gis.jpg";
 import mabelkanto from "../../asset/img/mabel-kanto.png";
+import pmi from "../../asset/img/pmi.jpg";
 import portfolio from "../../asset/img/portfolio.png";
 import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
-// import kopimeri from "../../asset/img/kopimeri.png";
-import pmi from "../../asset/img/pmi.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -83,16 +83,16 @@ const Portfolio = () => {
       featured: true,
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
-
-    // {
-    //   title: "design product kopimeri",
-    //   category: "Design-UI/UX",
-    //   description: "design product Hair Tonic dengan nama Kopi Meri",
-    //   image: kopimeri,
-    //   tech: ["Figma"],
-    //   featured: true,
-    //   github: "https://web-profile-kanto-mabel.vercel.app/",
-    // },
+    {
+      title: "raoseco Bubur Jongkong",
+      category: "Website",
+      description:
+        "Website Bubur Jongkong, adalah website yang menampilkan menu makanan dan minuman yang ada di Bubur Jongkong. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
+      image: bubur,
+      tech: ["React", "TailwindCSS", "vite"],
+      featured: true,
+      github: "https://raoseco-bubur-jongkong.vercel.app/",
+    },
     {
       title: "Website Profile PMI Aceh",
       category: "design-UI/UX",
