@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Figma, BarChart2 } from "lucide-react";
 import { useState } from "react";
 import bem from "../../asset/img/bem.jpg";
 import bubur from "../../asset/img/bubur-jongkong.jpg";
@@ -9,6 +9,7 @@ import pmi from "../../asset/img/pmi.jpg";
 import portfolio from "../../asset/img/portfolio.png";
 import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
+import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 
 const Portfolio = () => {
   const projects = [
@@ -20,7 +21,7 @@ const Portfolio = () => {
       image: crm,
       tech: ["Bootstrap 5", "Vite", "React", "Laravel 12", "MySQL"],
       featured: true,
-      github: "https://github.com/username/crm-project",
+      link: "https://github.com/username/crm-project",
     },
     {
       title: "CMS BEM FST",
@@ -30,7 +31,7 @@ const Portfolio = () => {
       image: bem,
       tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5"],
       featured: true,
-      github: "https://github.com/almuhayatsyah/WEB-BEM-FST-BUDIYAH",
+      link: "https://github.com/almuhayatsyah/WEB-BEM-FST-BUDIYAH",
     },
     {
       title: "GIS (Geographic Information System) Siswa Kurang Mampu",
@@ -40,7 +41,7 @@ const Portfolio = () => {
       image: gis,
       tech: ["CodeIgniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
-      github: "https://github.com/username/gis-siswa-kurang-mampu",
+      link: "https://github.com/username/gis-siswa-kurang-mampu",
     },
     {
       title: "Web Portfolio",
@@ -50,7 +51,7 @@ const Portfolio = () => {
       image: portfolio,
       tech: ["React", "TailwindCSS"],
       featured: true,
-      github: "https://github.com/almuhayatsyah/web-profile",
+      link: "https://github.com/almuhayatsyah/web-profile",
     },
     {
       title: "Mabel Kanto",
@@ -60,7 +61,7 @@ const Portfolio = () => {
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
       featured: true,
-      github: "https://web-profile-kanto-mabel.vercel.app/",
+      link: "https://web-profile-kanto-mabel.vercel.app/",
     },
 
     {
@@ -71,17 +72,7 @@ const Portfolio = () => {
       image: redesain,
       tech: ["Figma"],
       featured: true,
-      github: "https://web-profile-kanto-mabel.vercel.app/",
-    },
-    {
-      title: "Dashboard Data Sosial Ekonomi",
-      category: "Data Visualization",
-      description:
-        "Dashboard interaktif untuk visualisasi data sosial ekonomi menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
-      image: visualisasi,
-      tech: ["Looker Studio", "Excel", "Google Sheets"],
-      featured: true,
-      github: "https://web-profile-kanto-mabel.vercel.app/",
+      link: "https://www.figma.com/proto/your-project-link",
     },
     {
       title: "Raoseco Bubur Jongkong",
@@ -89,9 +80,9 @@ const Portfolio = () => {
       description:
         "Katalog menu digital untuk UMKM Raoseco Bubur Jongkong. Menampilkan varian produk dengan fotografi yang menggugah selera dan antarmuka yang responsif untuk meningkatkan engagement pelanggan.",
       image: bubur,
-      tech: ["React", "TailwindCSS", "Vite"],
+      tech: ["React", "TailwindCSS"],
       featured: true,
-      github: "https://raoseco-bubur-jongkong.vercel.app/",
+      link: "https://raoseco-bubur-jongkong.vercel.app/",
     },
     {
       title: "UI/UX Mobile App PMI Aceh",
@@ -101,7 +92,27 @@ const Portfolio = () => {
       image: pmi,
       tech: ["Figma"],
       featured: true,
-      github: "https://web-profile-kanto-mabel.vercel.app/",
+      link: "https://www.figma.com/proto/your-pmi-project-link",
+    },
+    {
+      title: "Dashboard Data Sosial Ekonomi",
+      category: "Data Visualization",
+      description:
+        "Dashboard interaktif untuk visualisasi data sosial ekonomi menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
+      image: visualisasi,
+      tech: ["Looker Studio", "Excel", "Google Sheets"],
+      featured: true,
+      link: "https://lookerstudio.google.com/reporting/your-report-link",
+    },
+    {
+      title: "Dashboard HRGS",
+      category: "Data Visualization", 
+      description:
+        "Dashboard interaktif untuk visualisasi data HRGS menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
+      image: hrgsdasbor,
+      tech: ["Looker Studio", "Excel", "Google Sheets"],
+      featured: true,
+      link: "https://lookerstudio.google.com/reporting/your-report-link",
     },
   ];
 
@@ -117,6 +128,16 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<
     null | (typeof projects)[0]
   >(null);
+
+  const getProjectIcon = (category: string, tech: string[]) => {
+    if (category === "Design-UI/UX" || tech.includes("Figma")) {
+      return <Figma size={20} />;
+    }
+    if (category === "Data Visualization" || tech.includes("Looker Studio")) {
+      return <BarChart2 size={20} />;
+    }
+    return <Github size={20} />;
+  };
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -151,12 +172,12 @@ const Portfolio = () => {
             <p className="text-gray-700 mb-4">{selectedProject.description}</p>
             <div className="flex space-x-4">
               <a
-                href={selectedProject.github}
+                href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors border border-gray-200 shadow-sm"
               >
-                <Github size={20} />
+                {getProjectIcon(selectedProject.category, selectedProject.tech)}
               </a>
             </div>
           </div>
@@ -228,13 +249,13 @@ const Portfolio = () => {
                         <ExternalLink size={20} />
                       </a> */}
                       <a
-                        href={project.github}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Github size={20} />
+                        {getProjectIcon(project.category, project.tech)}
                       </a>
                     </div>
                   </div>

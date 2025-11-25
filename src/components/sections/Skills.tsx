@@ -1,4 +1,25 @@
+import { motion } from "framer-motion";
+
 const Skills = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   const skillCategories = [
     {
       title: "Backend & Database",
@@ -52,7 +73,13 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               My <span className="text-blue-600">Skills</span>
             </h2>
@@ -60,13 +87,21 @@ const Skills = () => {
               Teknologi dan tools yang saya kuasai untuk membangun solusi
               digital yang berkualitas
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {skillCategories.map((category, categoryIndex) => (
-              <div
+              <motion.div
                 key={categoryIndex}
                 className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                variants={itemVariants}
+                whileHover={{ y: -5 }}
               >
                 <div
                   className={`inline-block bg-gradient-to-r ${category.color} text-white px-4 py-2 rounded-lg mb-6`}
@@ -86,9 +121,9 @@ const Skills = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
