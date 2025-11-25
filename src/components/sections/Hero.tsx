@@ -22,8 +22,10 @@ const Hero = () => {
         <div className="animate-fade-in-up flex flex-col items-center">
           <img
             src={profileImg}
-            alt="Almuhayatsyah"
+            alt="Almuhayatsyah - Fullstack Web Developer Aceh Portfolio"
             className="w-36 h-36 rounded-full object-cover border-4 border-blue-400 shadow-lg mb-6"
+            width="144"
+            height="144"
           />
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             Web-Dev{" "}

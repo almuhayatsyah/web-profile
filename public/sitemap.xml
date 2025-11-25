@@ -11,46 +11,5 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Section: About -->
-  <url>
-    <loc>https://almuhayatsyah.my.id/#about</loc>
-    <lastmod>2024-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Section: Skills -->
-  <url>
-    <loc>https://almuhayatsyah.my.id/#skills</loc>
-    <lastmod>2024-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Section: Portfolio -->
-  <url>
-    <loc>https://almuhayatsyah.my.id/#portfolio</loc>
-    <lastmod>2024-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Section: Experience -->
-  <url>
-    <loc>https://almuhayatsyah.my.id/#experience</loc>
-    <lastmod>2024-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Section: Contact -->
-  <url>
-    <loc>https://almuhayatsyah.my.id/#contact</loc>
-    <lastmod>2024-12-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
 </urlset>
 

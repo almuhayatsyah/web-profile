@@ -16,9 +16,9 @@ const Portfolio = () => {
       title: "Costumer Relationship Management (CRM)",
       category: "Website",
       description:
-        "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang dilengkapi dengan fitur pencatatan interaksi & kunjungan, feedback layanan, notifikasi otomatis, serta dashboard admin & manajer yang komprehensif. Sistem ini juga mendukung laporan dinamis, ekspor data (PDF & Excel), dan kontrol akses berbasis role (admin, staff, manajer, pelanggan), serta terintegrasi dengan sistem pemantauan pemakaian daya pelanggan secara periodik.",
+        "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang komprehensif. Dilengkapi fitur pencatatan interaksi, feedback layanan, notifikasi otomatis, serta dashboard analitik. Mendukung ekspor data (PDF & Excel), kontrol akses berbasis role (RBAC), dan integrasi pemantauan daya pelanggan.",
       image: crm,
-      tech: ["Bootstrap 5", "vite", "React", "Laravel 12", "Mysql"],
+      tech: ["Bootstrap 5", "Vite", "React", "Laravel 12", "MySQL"],
       featured: true,
       github: "https://github.com/username/crm-project",
     },
@@ -26,9 +26,9 @@ const Portfolio = () => {
       title: "CMS BEM FST",
       category: "Website",
       description:
-        "Website profil resmi Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi Universitas Ubudiyah Indonesia. Menyediakan fitur manajemen konten berita, agenda, galeri, dan struktur organisasi, serta dashboard admin untuk pengelolaan data secara dinamis.",
+        "Portal resmi Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi Universitas Ubudiyah Indonesia. Menampilkan manajemen konten berita, agenda, dan galeri kegiatan dengan CMS (Content Management System) yang user-friendly.",
       image: bem,
-      tech: ["codeigniter 4", "mysql", "Bootstrap 5"],
+      tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5"],
       featured: true,
       github: "https://github.com/almuhayatsyah/WEB-BEM-FST-BUDIYAH",
     },
@@ -36,9 +36,9 @@ const Portfolio = () => {
       title: "GIS (Geographic Information System) Siswa Kurang Mampu",
       category: "Website",
       description:
-        "Aplikasi pemetaan lokasi siswa kurang mampu berbasis web, memudahkan visualisasi dan analisis data penerima bantuan pendidikan secara geografis. Mendukung pencarian, filter data, dan integrasi peta interaktif.",
+        "Sistem Informasi Geografis (SIG) untuk pemetaan persebaran siswa kurang mampu. Memudahkan visualisasi data spasial, analisis bantuan pendidikan, dan pengambilan keputusan berbasis lokasi dengan peta interaktif.",
       image: gis,
-      tech: ["Codeigniter 4", "Bootstrap 5", "MySQL"],
+      tech: ["CodeIgniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
       github: "https://github.com/username/gis-siswa-kurang-mampu",
     },
@@ -56,7 +56,7 @@ const Portfolio = () => {
       title: "Mabel Kanto",
       category: "Website",
       description:
-        "Website profil Mabel Kanto, Adalah Website Profile Company .",
+        "Company Profile untuk Mabel Kanto, dirancang untuk membangun kehadiran digital yang profesional, menampilkan layanan, dan portofolio perusahaan dengan desain elegan.",
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -64,40 +64,40 @@ const Portfolio = () => {
     },
 
     {
-      title: "Redesain Website Profile UKM",
+      title: "Redesain UI/UX Sigupai Jek",
       category: "Design-UI/UX",
       description:
-        "Saya Redesain ulang Aplikasi Sigupai Jek dari ABDYA, saya membuat tampilan lebih moderen agar menyesuaikan dengan tampilan Aplikasi sekarang.",
+        "Perancangan ulang antarmuka aplikasi Sigupai Jek (ABDYA) dengan pendekatan User-Centered Design. Fokus pada modernisasi tampilan dan peningkatan usability agar lebih relevan dengan tren desain aplikasi on-demand terkini.",
       image: redesain,
       tech: ["Figma"],
       featured: true,
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
     {
-      title: "Visualisasi Data Sosial Ekonomi",
+      title: "Dashboard Data Sosial Ekonomi",
       category: "Data Visualization",
       description:
-        "visualisasi data sosial ekonomi menggunkan Looker Studio, memudahkan analisis dan interpretasi data melalui grafik interaktif. Cocok untuk presentasi data kepada pemangku kepentingan.",
+        "Dashboard interaktif untuk visualisasi data sosial ekonomi menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
       image: visualisasi,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
       github: "https://web-profile-kanto-mabel.vercel.app/",
     },
     {
-      title: "raoseco Bubur Jongkong",
+      title: "Raoseco Bubur Jongkong",
       category: "Website",
       description:
-        "Website Bubur Jongkong, adalah website yang menampilkan menu makanan dan minuman yang ada di Bubur Jongkong. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
+        "Katalog menu digital untuk UMKM Raoseco Bubur Jongkong. Menampilkan varian produk dengan fotografi yang menggugah selera dan antarmuka yang responsif untuk meningkatkan engagement pelanggan.",
       image: bubur,
-      tech: ["React", "TailwindCSS", "vite"],
+      tech: ["React", "TailwindCSS", "Vite"],
       featured: true,
       github: "https://raoseco-bubur-jongkong.vercel.app/",
     },
     {
-      title: "Website Profile PMI Aceh",
-      category: "design-UI/UX",
+      title: "UI/UX Mobile App PMI Aceh",
+      category: "Design-UI/UX",
       description:
-        "design Aplikasi Mobile Donor darah Dari PMI Aceh Barat Daya ",
+        "Desain antarmuka aplikasi mobile untuk Donor Darah PMI Aceh Barat Daya. Dirancang untuk mempermudah pendonor dalam mengakses jadwal, lokasi, dan riwayat donor darah.",
       image: pmi,
       tech: ["Figma"],
       featured: true,
@@ -133,8 +133,9 @@ const Portfolio = () => {
             </button>
             <img
               src={selectedProject.image}
-              alt={selectedProject.title}
+              alt={`Detail Project ${selectedProject.title}`}
               className="w-full max-h-80 sm:max-h-96 object-contain rounded-lg mb-4"
+              loading="lazy"
             />
             <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
             <div className="flex flex-wrap gap-2 mb-3">
@@ -203,8 +204,11 @@ const Portfolio = () => {
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`Portfolio ${project.title} - Almuhayatsyah Web Developer`}
                     className="w-full max-h-48 sm:max-h-56 object-contain group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="400"
+                    height="300"
                   />
                   {project.featured && (
                     <div className="absolute top-5 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
