@@ -40,6 +40,7 @@ const Header = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Portfolio", href: "#portfolio" },
+    { name: "Layanan Digital", href: "#digital-services" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];

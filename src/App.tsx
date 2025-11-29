@@ -10,6 +10,8 @@ import Portfolio from "./components/sections/Portfolio";
 import { ClipLoader } from "react-spinners";
 import Skills from "./components/sections/Skills";
 
+import DigitalServices from "./components/sections/DigitalServices";
+
 function App() {
   const [theme, setTheme] = React.useState(
     localStorage.getItem("theme") || "light"
@@ -59,6 +61,7 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
+      <DigitalServices />
       <Experience />
       <Contact />
       <Footer />
