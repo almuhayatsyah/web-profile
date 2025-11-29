@@ -47,16 +47,7 @@ function App() {
 
   return (
     <div className="App min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <Header />
-      <div className="absolute top-20 right-5 z-40">
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          aria-label="Toggle theme"
-        >
-          {theme === "light" ? "🌙" : "☀️"}
-        </button>
-      </div>
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
       <Skills />

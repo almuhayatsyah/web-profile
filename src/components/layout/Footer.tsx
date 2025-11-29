@@ -90,10 +90,10 @@ const Footer = () => {
                 <span>
                   made in {""}
                   <a
-                    href="https://www.indonesia.go.id"
+                    href=""
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Indonesia
+                    Aceh
                   </a>
                 </span>
               </div>
