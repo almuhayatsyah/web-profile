@@ -21,7 +21,7 @@ const Portfolio = () => {
       image: crm,
       tech: ["Bootstrap 5", "Vite", "React", "Laravel 12", "MySQL"],
       featured: true,
-      link: "https://github.com/username/crm-project",
+      link: "https://github.com/almuhayatsyah/CRM-PLN-PAE-ACEH",
     },
     {
       title: "CMS BEM FST",
@@ -41,7 +41,7 @@ const Portfolio = () => {
       image: gis,
       tech: ["CodeIgniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
-      link: "https://github.com/username/gis-siswa-kurang-mampu",
+      link: "https://github.com/almuhayatsyah/GIS-SMAN4-ABDYA",
     },
     {
       title: "Web Portfolio",
@@ -140,13 +140,13 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20 bg-white dark:bg-gray-900">
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-lg w-full p-6 relative">
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
               onClick={() => setSelectedProject(null)}
               aria-label="Close"
             >
@@ -158,18 +158,18 @@ const Portfolio = () => {
               className="w-full max-h-80 sm:max-h-96 object-contain rounded-lg mb-4"
               loading="lazy"
             />
-            <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+            <h3 className="text-2xl font-bold mb-2 dark:text-white">{selectedProject.title}</h3>
             <div className="flex flex-wrap gap-2 mb-3">
               {selectedProject.tech.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
                 >
                   {tech}
                 </span>
               ))}
             </div>
-            <p className="text-gray-700 mb-4">{selectedProject.description}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">{selectedProject.description}</p>
             <div className="flex space-x-4">
               <a
                 href={selectedProject.link}
@@ -186,10 +186,10 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               My <span className="text-blue-600">Portfolio</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Beberapa project yang telah saya kerjakan dengan berbagai
               teknologi dan industri
             </p>
@@ -202,7 +202,7 @@ const Portfolio = () => {
                     ${
                       activeCategory === cat
                         ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-white text-blue-600 border-blue-600"
+                        : "bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400"
                     }
                   `}
                 >
@@ -216,7 +216,7 @@ const Portfolio = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className={`group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+                className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                   project.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
                 onClick={() => setSelectedProject(project)}
@@ -262,17 +262,17 @@ const Portfolio = () => {
                 </div>
                 <div className="p-6">
                   {/* Category removed */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                        className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
                       >
                         {tech}
                       </span>

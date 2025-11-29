@@ -1,6 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 import profileImg from "../../asset/img/profile.jpg";
 import pdf from "../../asset/pdf/cv.pdf";
+import ReactTypingEffect from 'react-typing-effect';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -27,16 +28,22 @@ const Hero = () => {
             width="144"
             height="144"
           />
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Web-Dev{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Almuhayatsyah
-            </span>
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            Fullstack Dev & Data Visualization{" "}
+            <ReactTypingEffect
+              text={["Almuhayatsyah"]}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block mt-2"
+              speed={100}
+              eraseSpeed={50}
+              eraseDelay={2000}
+              typingDelay={500}
+            />
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Fullstack Developer yang passionate dalam menciptakan solusi digital
-            yang inovatif dan user-friendly
+            Mewujudkan ide melalui kode dan desain. Fokus pada Fullstack
+            Development, UI/UX Website & Produk, serta layanan Entry Data &
+            Visualisasi yang presisi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
