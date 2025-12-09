@@ -1,4 +1,4 @@
-import { Github, Figma, BarChart2 } from "lucide-react";
+import { Figma, BarChart2, Search } from "lucide-react";
 import { useState } from "react";
 import bem from "../../asset/img/bem.jpg";
 import bubur from "../../asset/img/bubur-jongkong.jpg";
@@ -10,14 +10,14 @@ import portfolio from "../../asset/img/portfolio.png";
 import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
 import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
+import posUmkm from "../../asset/img/sistem pos umkm.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "Costumer Relationship Management (CRM)",
       category: "Website",
-      description:
-        "Sistem CRM Prioritas PLN UID Aceh adalah platform manajemen pelanggan prioritas yang komprehensif. Dilengkapi fitur pencatatan interaksi, feedback layanan, notifikasi otomatis, serta dashboard analitik. Mendukung ekspor data (PDF & Excel), kontrol akses berbasis role (RBAC), dan integrasi pemantauan daya pelanggan.",
+      description: "Aplikasi manajemen untuk pelanggan prioritas PLN UID Aceh. Memudahkan pencatatan interaksi, masukan pelanggan, dan menyediakan laporan otomatis. Membantu tim dalam memantau layanan dan mengambil keputusan lebih cepat.",
       image: crm,
       tech: ["Bootstrap 5", "Vite", "React", "Laravel 12", "MySQL"],
       featured: true,
@@ -26,8 +26,7 @@ const Portfolio = () => {
     {
       title: "CMS BEM FST",
       category: "Website",
-      description:
-        "Portal resmi Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi Universitas Ubudiyah Indonesia. Menampilkan manajemen konten berita, agenda, dan galeri kegiatan dengan CMS (Content Management System) yang user-friendly.",
+      description: "Website resmi untuk Badan Eksekutif Mahasiswa. Memudahkan pengurus untuk menyebarkan berita, agenda kegiatan, dan galeri foto terkini agar mahasiswa selalu mendapatkan informasi terbaru.",
       image: bem,
       tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5"],
       featured: true,
@@ -36,8 +35,7 @@ const Portfolio = () => {
     {
       title: "GIS (Geographic Information System) Siswa Kurang Mampu",
       category: "Website",
-      description:
-        "Sistem Informasi Geografis (SIG) untuk pemetaan persebaran siswa kurang mampu. Memudahkan visualisasi data spasial, analisis bantuan pendidikan, dan pengambilan keputusan berbasis lokasi dengan peta interaktif.",
+      description: "Peta digital interaktif untuk melihat persebaran siswa kurang mampu. Membantu pihak sekolah dan dinas terkait dalam menyalurkan bantuan pendidikan agar lebih tepat sasaran berdasarkan lokasi tempat tinggal siswa.",
       image: gis,
       tech: ["CodeIgniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
@@ -46,8 +44,7 @@ const Portfolio = () => {
     {
       title: "Web Portfolio",
       category: "Website",
-      description:
-        "Website portfolio pribadi yang menampilkan project, pengalaman, dan skill saya sebagai web developer. Dibangun dengan desain modern, responsif, dan mudah dikembangkan.",
+      description: "Website pribadi saya yang menampilkan karya dan pengalaman profesional. Dibuat dengan desain yang bersih dan cepat diakses, sebagai contoh kualitas website yang bisa saya bangun untuk Anda.",
       image: portfolio,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -56,8 +53,7 @@ const Portfolio = () => {
     {
       title: "Mabel Kanto",
       category: "Website",
-      description:
-        "Company Profile untuk Mabel Kanto, dirancang untuk membangun kehadiran digital yang profesional, menampilkan layanan, dan portofolio perusahaan dengan desain elegan.",
+      description: "Website profil perusahaan untuk Mabel Kanto. Menampilkan layanan dan hasil karya perusahaan dengan desain yang elegan untuk meningkatkan citra profesional di mata klien.",
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -67,8 +63,7 @@ const Portfolio = () => {
     {
       title: "Redesain UI/UX Sigupai Jek",
       category: "Design-UI/UX",
-      description:
-        "Perancangan ulang antarmuka aplikasi Sigupai Jek (ABDYA) dengan pendekatan User-Centered Design. Fokus pada modernisasi tampilan dan peningkatan usability agar lebih relevan dengan tren desain aplikasi on-demand terkini.",
+      description: "Konsep tampilan baru untuk aplikasi Sigupai Jek. Fokus pada kemudahan penggunaan agar pengguna dapat memesan layanan ojek online dengan lebih cepat dan nyaman.",
       image: redesain,
       tech: ["Figma"],
       featured: true,
@@ -77,8 +72,7 @@ const Portfolio = () => {
     {
       title: "Raoseco Bubur Jongkong",
       category: "Website",
-      description:
-        "Katalog menu digital untuk UMKM Raoseco Bubur Jongkong. Menampilkan varian produk dengan fotografi yang menggugah selera dan antarmuka yang responsif untuk meningkatkan engagement pelanggan.",
+      description: "Menu digital online untuk usaha kuliner Raoseco. Pelanggan dapat melihat foto makanan yang menarik dan daftar menu dengan mudah melalui HP mereka.",
       image: bubur,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -87,8 +81,7 @@ const Portfolio = () => {
     {
       title: "UI/UX Mobile App PMI Aceh",
       category: "Design-UI/UX",
-      description:
-        "Desain antarmuka aplikasi mobile untuk Donor Darah PMI Aceh Barat Daya. Dirancang untuk mempermudah pendonor dalam mengakses jadwal, lokasi, dan riwayat donor darah.",
+      description: "Desain aplikasi HP untuk memudahkan pendonor darah. Membantu pengguna menemukan jadwal donor, lokasi terdekat, dan mencatat riwayat donor mereka.",
       image: pmi,
       tech: ["Figma"],
       featured: true,
@@ -97,8 +90,7 @@ const Portfolio = () => {
     {
       title: "Dashboard Data Sosial Ekonomi",
       category: "Data Visualization",
-      description:
-        "Dashboard interaktif untuk visualisasi data sosial ekonomi menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
+      description: "Tampilan grafik data yang mudah dibaca untuk memantau kondisi sosial ekonomi. Mengubah data angka yang rumit menjadi grafik yang mudah dipahami untuk pengambilan keputusan.",
       image: visualisasi,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
@@ -107,12 +99,20 @@ const Portfolio = () => {
     {
       title: "Dashboard HRGS",
       category: "Data Visualization", 
-      description:
-        "Dashboard interaktif untuk visualisasi data HRGS menggunakan Looker Studio. Mengubah data mentah menjadi wawasan yang mudah dipahami melalui grafik dinamis untuk mendukung pengambilan keputusan strategis.",
+      description: "Laporan visual interaktif untuk data HRGS. Membantu manajemen melihat tren dan ringkasan data penting dalam bentuk grafik yang rapi dan update.",
       image: hrgsdasbor,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
       link: "https://lookerstudio.google.com/reporting/your-report-link",
+    },
+    {
+      title: "Sistem POS dan Stock Barang",
+      category: "Website",
+      description: "Sistem POS dan Stock Barang untuk UMKM. Membantu pengelolaan penjualan dan stok dengan mudah dan cepat.",
+      image: posUmkm,
+      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
+      featured: true,
+      link: "",
     },
   ];
 
@@ -131,12 +131,12 @@ const Portfolio = () => {
 
   const getProjectIcon = (category: string, tech: string[]) => {
     if (category === "Design-UI/UX" || tech.includes("Figma")) {
-      return <Figma size={20} />;
+      return <Figma size={16} />;
     }
     if (category === "Data Visualization" || tech.includes("Looker Studio")) {
-      return <BarChart2 size={20} />;
+      return <BarChart2 size={16} />;
     }
-    return <Github size={20} />;
+    return <Search size={16} />;
   };
 
   return (
@@ -175,8 +175,9 @@ const Portfolio = () => {
                 href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors border border-gray-200 shadow-sm"
+                className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-6 py-3 rounded-full hover:opacity-90 transition-colors flex items-center gap-2 font-medium"
               >
+                <span>Telusuri Project</span>
                 {getProjectIcon(selectedProject.category, selectedProject.tech)}
               </a>
             </div>
@@ -252,9 +253,10 @@ const Portfolio = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                        className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium text-sm flex items-center gap-2"
                         onClick={(e) => e.stopPropagation()}
                       >
+                        <span>Telusuri</span>
                         {getProjectIcon(project.category, project.tech)}
                       </a>
                     </div>

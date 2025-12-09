@@ -5,23 +5,23 @@ const About = () => {
   const highlights = [
     {
       icon: <Code className="text-blue-600" size={24} />,
-      title: "Clean Code Advocate",
-      description: "Selalu berusaha menulis kode yang rapi dan mudah dipahami.",
+      title: "Mengutamakan Kualitas",
+      description: "Memastikan setiap website berjalan lancar, cepat, dan minim error.",
     },
     {
       icon: <Lightbulb className="text-purple-600" size={24} />,
-      title: "Problem Solver",
-      description: "Terbiasa menganalisis dan menyelesaikan masalah teknis.",
+      title: "Solusi Efektif",
+      description: "Menganalisis kebutuhan Anda dan memberikan solusi teknis yang tepat.",
     },
     {
       icon: <Target className="text-emerald-600" size={24} />,
-      title: "Goal Oriented",
-      description: "Fokus pada pencapaian target dan hasil yang jelas.",
+      title: "Fokus Pada Hasil",
+      description: "Berkomitmen menyelesaikan project sesuai target dan ekspektasi Anda.",
     },
     {
       icon: <Users className="text-orange-600" size={24} />,
-      title: "Team Player",
-      description: "Senang bekerja sama dan berkontribusi dalam tim.",
+      title: "Mudah Berkolaborasi",
+      description: "Dapat bekerja sama dengan baik dan komunikatif dalam setiap tahap pengerjaan.",
     },
   ];
 
@@ -47,14 +47,11 @@ const About = () => {
               About <span className="text-blue-600">Me</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Saya adalah seorang Fullstack Developer yang telah membangun
-              berbagai solusi digital nyata, mulai dari sistem CRM untuk
-              manajemen pelanggan prioritas PLN, website organisasi mahasiswa,
-              aplikasi GIS pemetaan data sosial, hingga web portfolio pribadi
-              dan project UI/UX serta data visualization. Saya terbiasa
-              mengerjakan aplikasi end-to-end: mulai dari desain antarmuka,
-              pengembangan backend, integrasi API, hingga deployment dan
-              maintenance.
+              Saya adalah pengembang web yang berdedikasi menciptakan solusi digital yang bermanfaat.
+              Pengalaman saya mencakup pembuatan berbagai jenis sistem, mulai dari aplikasi manajemen 
+              untuk perusahaan, website organisasi, hingga peta digital interaktif. 
+              Saya menangani seluruh proses pembuatan website, mulai dari tampilan yang menarik (desain)
+              hingga sistem di balik layar yang canggih, memastikan semuanya berjalan optimal untuk Anda.
             </p>
           </motion.div>
 
@@ -67,20 +64,16 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Beberapa project yang saya kembangkan antara lain: CRM Prioritas
-                PLN UID Aceh, CMS BEM FST, GIS Siswa Kurang Mampu, Web
-                Portfolio, desain UI/UX produk, dan visualisasi data sosial
-                ekonomi. Setiap project saya kerjakan dengan fokus pada
-                kebutuhan pengguna, keamanan data, kemudahan maintenance, dan
-                tampilan yang modern serta responsif.
+                Beberapa project yang pernah saya kerjakan meliputi sistem manajemen pelanggan (CRM),
+                website profil organisasi, sistem informasi geografis (peta digital), serta visualisasi data.
+                Setiap project saya kerjakan dengan mengutamakan kemudahan penggunaan, keamanan data,
+                dan tampilan modern yang nyaman dilihat di berbagai perangkat (HP maupun Laptop).
               </p>
 
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Saya terbiasa berkolaborasi dalam tim lintas disiplin, mengelola
-                workflow dengan tools modern, serta selalu mengutamakan clean
-                code dan dokumentasi yang baik. Saya juga aktif mempelajari
-                teknologi baru untuk meningkatkan kualitas dan performa solusi
-                yang saya bangun.
+                Saya terbiasa bekerja secara profesional dan transparan. Saya menggunakan
+                alat bantu kerja modern untuk memastikan project berjalan rapi, serta selalu
+                menjaga komunikasi yang baik agar hasil akhir sesuai dengan apa yang Anda bayangkan.
               </p>
 
               <div className="pt-4">
@@ -90,20 +83,19 @@ const About = () => {
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Berpengalaman membangun CRM, GIS, CMS, Web Portfolio, UI/UX,
-                    dan Data Visualization dari nol
+                    Berpengalaman membuat berbagai sistem website yang kompleks dari nol
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Menguasai pengembangan API, database, dan integrasi sistem
+                    Mampu menangani teknis rumit (database, server) agar Anda tidak perlu pusing
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Kolaboratif, komunikatif, dan terbiasa kerja tim
+                    Komunikatif, mudah diajak diskusi, dan responsif
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Selalu update dengan teknologi dan best practice terbaru
+                    Selalu mengikuti tren teknologi terbaru untuk hasil terbaik
                   </li>
                 </ul>
               </div>

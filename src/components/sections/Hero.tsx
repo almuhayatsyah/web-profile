@@ -29,7 +29,7 @@ const Hero = () => {
             height="144"
           />
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Fullstack Dev & Data Visualization{" "}
+           Website Developer & Data Visualization{" "}
             <ReactTypingEffect
               text={["Almuhayatsyah"]}
               className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block mt-2"
@@ -41,9 +41,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Mewujudkan ide melalui kode dan desain. Fokus pada Fullstack
-            Development, UI/UX Website & Produk, serta layanan Entry Data &
-            Visualisasi yang presisi.
+            Membantu Anda mewujudkan ide menjadi website yang menarik dan fungsional. 
+            Saya menggabungkan desain kreatif dengan teknologi terkini untuk solusi digital yang 
+            tepat sasaran bagi bisnis maupun kebutuhan pribadi Anda.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

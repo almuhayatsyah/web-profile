@@ -74,8 +74,8 @@ const DigitalServices = () => {
                   <Rocket size={20} />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Performance</p>
-                  <p className="font-bold text-gray-900 dark:text-white">100% Fast</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Performa</p>
+                  <p className="font-bold text-gray-900 dark:text-white">Dijamin Cepat</p>
                 </div>
               </div>
             </div>
