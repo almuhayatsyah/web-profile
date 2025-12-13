@@ -1,0 +1,19 @@
+/* TEAM */
+Developer: Almuhayatsyah
+Contact: almuhayats@gmail.com
+Location: Aceh, Indonesia
+GitHub: https://github.com/almuhayatsyah
+LinkedIn: https://www.linkedin.com/in/al-muhayatsyah-7817b1290/
+
+/* SITE */
+Last update: 2024/12/13
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, TypeScript, TailwindCSS
+Software: Visual Studio Code, Git, Figma
+
+/* THANKS */
+Framework: React + Vite
+UI Library: TailwindCSS
+Icons: Lucide React
+Animations: Framer Motion
+Hosting: Vercel / Your Hosting Provider

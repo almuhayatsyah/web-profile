@@ -34,6 +34,8 @@
     <meta name="geo.region" content="ID-AC" />
     <meta name="geo.placename" content="Aceh, Indonesia" />
     <meta name="rating" content="general" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="format-detection" content="telephone=no" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://almuhayatsyah.my.id/" />
@@ -69,6 +71,7 @@
     />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:site_name" content="Almuhayatsyah Portfolio" />
+    <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -94,6 +97,8 @@
     <meta name="theme-color" content="#2563eb" />
     <meta name="msapplication-TileColor" content="#2563eb" />
     <meta name="application-name" content="Almuhayatsyah Portfolio" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="author" href="/humans.txt" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -114,6 +119,7 @@
           "addressCountry": "ID"
         },
         "email": "almuhayats@gmail.com",
+        "telephone": "+62-813-2431-2332",
         "knowsAbout": [
           "Web Development",
           "Full Stack Development",
@@ -182,8 +188,42 @@
         "provider": {
           "@type": "Person",
           "name": "Almuhayatsyah",
-          "email": "almuhayats@gmail.com"
+          "email": "almuhayats@gmail.com",
+          "telephone": "+62-813-2431-2332"
+        },
+        "priceRange": "$$",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "IDR"
         }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://almuhayatsyah.my.id/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "https://almuhayatsyah.my.id/#portfolio"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Contact",
+            "item": "https://almuhayatsyah.my.id/#contact"
+          }
+        ]
       }
     </script>
   </head>
