@@ -10,7 +10,7 @@ import portfolio from "../../asset/img/portfolio.png";
 import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
 import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
-import posUmkm from "../../asset/img/sistem pos umkm.jpg";
+import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
 
 const Portfolio = () => {
   const projects = [
