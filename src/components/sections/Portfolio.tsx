@@ -1,5 +1,6 @@
 import { Figma, BarChart2, Search } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import bem from "../../asset/img/bem.jpg";
 import bubur from "../../asset/img/bubur-jongkong.jpg";
 import crm from "../../asset/img/crm.jpg";
@@ -44,7 +45,7 @@ const Portfolio = () => {
     {
       title: "Web Portfolio",
       category: "Website",
-      description: "Website pribadi saya yang menampilkan karya dan pengalaman profesional. Dibuat dengan desain yang bersih dan cepat diakses, sebagai contoh kualitas website yang bisa saya bangun untuk Anda.",
+      description: "Website pribadi yang menampilkan kumpulan karya dan pengalaman saya di bidang web development dan data visualization. Dibuat dengan desain sederhana, cepat diakses, dan mudah dinavigasi.",
       image: portfolio,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -108,7 +109,7 @@ const Portfolio = () => {
     {
       title: "Sistem POS dan Stock Barang",
       category: "Website",
-      description: "Sistem POS dan Stock Barang untuk UMKM. Membantu pengelolaan penjualan dan stok dengan mudah dan cepat.",
+      description: "Sistem POS dan Stock Barang yang saya kembangkan untuk membantu pengelolaan penjualan dan stok secara efisien.",
       image: posUmkm,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
@@ -137,6 +138,57 @@ const Portfolio = () => {
       return <BarChart2 size={16} />;
     }
     return <Search size={16} />;
+  };
+
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
+  const filterVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        delay: 0.3,
+      },
+    },
   };
 
   return (
@@ -186,15 +238,27 @@ const Portfolio = () => {
       )}
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={headerVariants}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              My <span className="text-blue-600">Portfolio</span>
+              Karya <span className="text-blue-600">Portfolio</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Beberapa project yang telah saya kerjakan dengan berbagai
               teknologi dan industri
             </p>
-            <div className="flex flex-wrap gap-4 justify-center mb-8">
+            <motion.div 
+              className="flex flex-wrap gap-4 justify-center mb-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={filterVariants}
+            >
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -210,23 +274,34 @@ const Portfolio = () => {
                   {cat}
                 </button>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={containerVariants}
+          >
             {filteredProjects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+                variants={itemVariants}
+                className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
                   project.featured ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
                 onClick={() => setSelectedProject(project)}
                 style={{ cursor: "pointer" }}
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.3 }
+                }}
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
-                    alt={`Portfolio ${project.title} - Almuhayatsyah Web Developer`}
+                    alt={`Portfolio ${project.title} - Almuhayatsyah Portfolio`}
                     className="w-full max-h-48 sm:max-h-56 object-contain group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     width="400"
@@ -281,9 +356,9 @@ const Portfolio = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

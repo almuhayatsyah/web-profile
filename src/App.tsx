@@ -52,7 +52,6 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
-      <DigitalServices />
       <Experience />
       <Contact />
       <Footer />

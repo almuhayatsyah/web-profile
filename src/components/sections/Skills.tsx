@@ -81,11 +81,10 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              My <span className="text-blue-600">Skills</span>
+              Keahlian <span className="text-blue-600">Teknis</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Teknologi dan tools yang saya kuasai untuk membangun solusi
-              digital yang berkualitas
+              Berikut adalah beberapa teknologi dan tools yang biasa saya gunakan dalam pengembangan web dan data visualization.
             </p>
           </motion.div>
 

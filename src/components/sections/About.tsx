@@ -44,14 +44,10 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              About <span className="text-blue-600">Me</span>
+              Tentang <span className="text-blue-600">Saya</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Saya adalah pengembang web yang berdedikasi menciptakan solusi digital yang bermanfaat.
-              Pengalaman saya mencakup pembuatan berbagai jenis sistem, mulai dari aplikasi manajemen 
-              untuk perusahaan, website organisasi, hingga peta digital interaktif. 
-              Saya menangani seluruh proses pembuatan website, mulai dari tampilan yang menarik (desain)
-              hingga sistem di balik layar yang canggih, memastikan semuanya berjalan optimal untuk Anda.
+              Web developer yang fokus pada pembuatan website interaktif, informatif, dan mudah digunakan. Berpengalaman di project organisasi, bisnis, dan visualisasi data.
             </p>
           </motion.div>
 
@@ -64,38 +60,21 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Beberapa project yang pernah saya kerjakan meliputi sistem manajemen pelanggan (CRM),
-                website profil organisasi, sistem informasi geografis (peta digital), serta visualisasi data.
-                Setiap project saya kerjakan dengan mengutamakan kemudahan penggunaan, keamanan data,
-                dan tampilan modern yang nyaman dilihat di berbagai perangkat (HP maupun Laptop).
-              </p>
-
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Saya terbiasa bekerja secara profesional dan transparan. Saya menggunakan
-                alat bantu kerja modern untuk memastikan project berjalan rapi, serta selalu
-                menjaga komunikasi yang baik agar hasil akhir sesuai dengan apa yang Anda bayangkan.
+                Terbiasa mengerjakan project dari desain hingga backend, baik individu maupun tim.
               </p>
 
               <div className="pt-4">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Mengapa Memilih Saya?
+                  Inti Profil
                 </h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Berpengalaman membuat berbagai sistem website yang kompleks dari nol
+                    Suka belajar dan update teknologi web
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Mampu menangani teknis rumit (database, server) agar Anda tidak perlu pusing
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Komunikatif, mudah diajak diskusi, dan responsif
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Selalu mengikuti tren teknologi terbaru untuk hasil terbaik
+                    Kolaboratif, komunikatif, dan detail
                   </li>
                 </ul>
               </div>

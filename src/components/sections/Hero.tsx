@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 relative overflow-hidden pt-28 md:pt-0"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 relative overflow-hidden pt-28 md:pt-32"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
@@ -29,21 +29,15 @@ const Hero = () => {
             height="144"
           />
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-           Website Developer & Data Visualization{" "}
-            <ReactTypingEffect
-              text={["Almuhayatsyah"]}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block mt-2"
-              speed={100}
-              eraseSpeed={50}
-              eraseDelay={2000}
-              typingDelay={500}
-            />
+            Hi, saya <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Almuhayatsyah</span>
+            <br />Web Developer & Data Visualization Enthusiast
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Membantu Anda mewujudkan ide menjadi website yang menarik dan fungsional. 
-            Saya menggabungkan desain kreatif dengan teknologi terkini untuk solusi digital yang 
-            tepat sasaran bagi bisnis maupun kebutuhan pribadi Anda.
+            Saya seorang web developer yang suka membangun website interaktif, informatif, dan mudah digunakan. 
+            Portofolio ini berisi beberapa karya dan pengalaman saya dalam pengembangan web, mulai dari aplikasi manajemen, website organisasi, hingga visualisasi data.
+            <br />
+            Saya percaya bahwa setiap website adalah cerminan dari pemiliknya—dan saya selalu berusaha menghadirkan hasil yang rapi, fungsional, dan relevan.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
