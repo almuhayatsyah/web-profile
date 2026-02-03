@@ -1,3 +1,25 @@
+const educationData = [
+  {
+    level: "SD",
+    name: "MIN 1 Aceh Barat Daya",
+    year: "2008 - 2014",
+  },
+  {
+    level: "SMP",
+    name: "SMPN 1 Aceh Barat Daya",
+    year: "2014 - 2017",
+  },
+  {
+    level: "SMA",
+    name: "SMAN Unggul Aceh Barat Daya",
+    year: "2017 - 2020",
+  },
+  {
+    level: "Universitas",
+    name: "Universitas Contoh Indonesia",
+    year: "2021 - 2025",
+  },
+];
 import { Code, Lightbulb, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -62,7 +84,6 @@ const About = () => {
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 Terbiasa mengerjakan project dari desain hingga backend, baik individu maupun tim.
               </p>
-
               <div className="pt-4">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   Inti Profil
@@ -77,6 +98,20 @@ const About = () => {
                     Kolaboratif, komunikatif, dan detail
                   </li>
                 </ul>
+              </div>
+              <div className="pt-8">
+                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-4">Riwayat Pendidikan</h3>
+                <div className="space-y-4">
+                  {educationData.map((edu, idx) => (
+                    <div key={idx} className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow p-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                      <div>
+                        <div className="text-lg font-semibold text-gray-800 dark:text-gray-100">{edu.level}</div>
+                        <div className="text-gray-600 dark:text-gray-400">{edu.name}</div>
+                      </div>
+                      <div className="text-purple-600 dark:text-purple-300 font-medium mt-2 md:mt-0">{edu.year}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 

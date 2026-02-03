@@ -12,6 +12,7 @@ import redesain from "../../asset/img/redesain.jpg";
 import visualisasi from "../../asset/img/visualisasi.png";
 import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
+import lentera from "../../asset/img/lentera.png";
 
 const Portfolio = () => {
   const projects = [
@@ -114,6 +115,15 @@ const Portfolio = () => {
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "",
+    },
+     {
+      title: "Aplikasi Posyandu Lentera",
+      category: "Website", 
+      description: "Aplikasi untuk posyandu Lentera yang membantu dalam pencatatan data kesehatan anak dan ibu di posyandu Rindam Iskandar muda.",
+      image: lentera,
+      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
+      featured: true,
+      link: "https://lenterarindam-im.com/",
     },
   ];
 
