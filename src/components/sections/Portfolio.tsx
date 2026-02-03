@@ -1,6 +1,6 @@
 import { Figma, BarChart2, Search } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import bem from "../../asset/img/bem.jpg";
 import bubur from "../../asset/img/bubur-jongkong.jpg";
 import crm from "../../asset/img/crm.jpg";
@@ -289,85 +289,79 @@ const Portfolio = () => {
 
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
-                  project.featured ? "md:col-span-2 lg:col-span-1" : ""
-                }`}
-                onClick={() => setSelectedProject(project)}
-                style={{ cursor: "pointer" }}
-                whileHover={{ 
-                  y: -8,
-                  transition: { duration: 0.3 }
-                }}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={`Portfolio ${project.title} - Almuhayatsyah Portfolio`}
-                    className="w-full max-h-48 sm:max-h-56 object-contain group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                    width="400"
-                    height="300"
-                  />
-                  {project.featured && (
-                    <div className="absolute top-5 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Featured
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
-                      {/* ExternalLink button bisa diarahkan ke demo jika ada */}
-                      {/* <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-100 transition-colors"
-                        onClick={e => e.stopPropagation()}
-                      >
-                        <ExternalLink size={20} />
-                      </a> */}
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium text-sm flex items-center gap-2"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <span>Telusuri</span>
-                        {getProjectIcon(project.category, project.tech)}
-                      </a>
+            <AnimatePresence>
+              {filteredProjects.map((project) => (
+                <motion.div
+                  key={project.title}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit={{ opacity: 0, y: 30, scale: 0.95, transition: { duration: 0.3 } }}
+                  className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                    project.featured ? "md:col-span-2 lg:col-span-1" : ""
+                  }`}
+                  onClick={() => setSelectedProject(project)}
+                  style={{ cursor: "pointer" }}
+                  whileHover={{ 
+                    y: -8,
+                    transition: { duration: 0.3 }
+                  }}
+                  layout
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={`Portfolio ${project.title} - Almuhayatsyah Portfolio`}
+                      className="w-full max-h-48 sm:max-h-56 object-contain group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      width="400"
+                      height="300"
+                    />
+                    {project.featured && (
+                      <div className="absolute top-5 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Featured
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium text-sm flex items-center gap-2"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <span>Telusuri</span>
+                          {getProjectIcon(project.category, project.tech)}
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  {/* Category removed */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
         </div>
       </div>
