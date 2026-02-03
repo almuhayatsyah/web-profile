@@ -13,6 +13,7 @@ import visualisasi from "../../asset/img/visualisasi.png";
 import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
 import lentera from "../../asset/img/lentera.png";
+import tokodigital from "../../asset/img/tokodigital.png";
 
 const Portfolio = () => {
   const projects = [
@@ -124,6 +125,15 @@ const Portfolio = () => {
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "https://lenterarindam-im.com/",
+    },
+    {
+      title: "Aplikasi Toko Digital dan stock barang",
+      category: "Website", 
+      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
+      image: tokodigital,
+      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
+      featured: true,
+      link: "",
     },
   ];
 
