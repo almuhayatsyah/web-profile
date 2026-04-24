@@ -16,7 +16,7 @@ const educationData = [
   },
   {
     level: "Universitas",
-    name: "Universitas Contoh Indonesia",
+    name: "Universitas Ubudiyah Indonesia",
     year: "2021 - 2025",
   },
 ];
@@ -28,22 +28,26 @@ const About = () => {
     {
       icon: <Code className="text-blue-600" size={24} />,
       title: "Mengutamakan Kualitas",
-      description: "Memastikan setiap website berjalan lancar, cepat, dan minim error.",
+      description:
+        "Memastikan setiap website berjalan lancar, cepat, dan minim error.",
     },
     {
       icon: <Lightbulb className="text-purple-600" size={24} />,
       title: "Solusi Efektif",
-      description: "Menganalisis kebutuhan Anda dan memberikan solusi teknis yang tepat.",
+      description:
+        "Menganalisis kebutuhan Anda dan memberikan solusi teknis yang tepat.",
     },
     {
       icon: <Target className="text-emerald-600" size={24} />,
       title: "Fokus Pada Hasil",
-      description: "Berkomitmen menyelesaikan project sesuai target dan ekspektasi Anda.",
+      description:
+        "Berkomitmen menyelesaikan project sesuai target dan ekspektasi Anda.",
     },
     {
       icon: <Users className="text-orange-600" size={24} />,
       title: "Mudah Berkolaborasi",
-      description: "Dapat bekerja sama dengan baik dan komunikatif dalam setiap tahap pengerjaan.",
+      description:
+        "Dapat bekerja sama dengan baik dan komunikatif dalam setiap tahap pengerjaan.",
     },
   ];
 
@@ -69,7 +73,9 @@ const About = () => {
               Tentang <span className="text-blue-600">Saya</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Web developer yang fokus pada pembuatan website interaktif, informatif, dan mudah digunakan. Berpengalaman di project organisasi, bisnis, dan visualisasi data.
+              Web developer yang fokus pada pembuatan website interaktif,
+              informatif, dan mudah digunakan. Berpengalaman di project
+              organisasi, bisnis, dan visualisasi data.
             </p>
           </motion.div>
 
@@ -82,7 +88,8 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Terbiasa mengerjakan project dari desain hingga backend, baik individu maupun tim.
+                Terbiasa mengerjakan project dari desain hingga backend, baik
+                individu maupun tim.
               </p>
               <div className="pt-4">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -100,15 +107,26 @@ const About = () => {
                 </ul>
               </div>
               <div className="pt-8">
-                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-4">Riwayat Pendidikan</h3>
+                <h3 className="text-2xl font-semibold text-purple-700 dark:text-purple-300 mb-4">
+                  Riwayat Pendidikan
+                </h3>
                 <div className="space-y-4">
                   {educationData.map((edu, idx) => (
-                    <div key={idx} className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow p-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div
+                      key={idx}
+                      className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow p-4 flex flex-col md:flex-row md:items-center md:justify-between"
+                    >
                       <div>
-                        <div className="text-lg font-semibold text-gray-800 dark:text-gray-100">{edu.level}</div>
-                        <div className="text-gray-600 dark:text-gray-400">{edu.name}</div>
+                        <div className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                          {edu.level}
+                        </div>
+                        <div className="text-gray-600 dark:text-gray-400">
+                          {edu.name}
+                        </div>
                       </div>
-                      <div className="text-purple-600 dark:text-purple-300 font-medium mt-2 md:mt-0">{edu.year}</div>
+                      <div className="text-purple-600 dark:text-purple-300 font-medium mt-2 md:mt-0">
+                        {edu.year}
+                      </div>
                     </div>
                   ))}
                 </div>

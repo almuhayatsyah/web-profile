@@ -67,6 +67,16 @@ const Skills = () => {
         { name: "Agile / Scrum", level: 80 },
       ],
     },
+    {
+      title: "Videography & Editing",
+      color: "from-pink-500 to-orange-400",
+      skills: [
+        { name: "Adobe Premiere Pro", level: 85 },
+        { name: "CapCut", level: 90 },
+        { name: "Videography", level: 80 },
+        { name: "Video Production", level: 80 },
+      ],
+    },
   ];
 
   return (

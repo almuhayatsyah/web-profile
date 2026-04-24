@@ -14,6 +14,8 @@ import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
 import lentera from "../../asset/img/lentera.png";
 import tokodigital from "../../asset/img/tokodigital.png";
+import spanduk from "../../asset/img/spanduk.webp";
+import artboard from "../../asset/img/artboard.webp";
 
 const Portfolio = () => {
   const projects = [
@@ -131,6 +133,24 @@ const Portfolio = () => {
       category: "Website", 
       description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
       image: tokodigital,
+      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
+      featured: true,
+      link: "",
+    },
+    {
+      title: "spanduk",
+      category: "Website", 
+      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
+      image: spanduk,
+      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
+      featured: true,
+      link: "",
+    },
+     {
+      title: "spanduk",
+      category: "Website", 
+      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
+      image: artboard,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "",
