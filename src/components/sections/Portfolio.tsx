@@ -14,15 +14,14 @@ import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
 import lentera from "../../asset/img/lentera.png";
 import tokodigital from "../../asset/img/tokodigital.png";
-import spanduk from "../../asset/img/spanduk.webp";
-import artboard from "../../asset/img/artboard.webp";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "Costumer Relationship Management (CRM)",
       category: "Website",
-      description: "Aplikasi manajemen untuk pelanggan prioritas PLN UID Aceh. Memudahkan pencatatan interaksi, masukan pelanggan, dan menyediakan laporan otomatis. Membantu tim dalam memantau layanan dan mengambil keputusan lebih cepat.",
+      description:
+        "Aplikasi manajemen untuk pelanggan prioritas PLN UID Aceh. Memudahkan pencatatan interaksi, masukan pelanggan, dan menyediakan laporan otomatis. Membantu tim dalam memantau layanan dan mengambil keputusan lebih cepat.",
       image: crm,
       tech: ["Bootstrap 5", "Vite", "React", "Laravel 12", "MySQL"],
       featured: true,
@@ -31,7 +30,8 @@ const Portfolio = () => {
     {
       title: "CMS BEM FST",
       category: "Website",
-      description: "Website resmi untuk Badan Eksekutif Mahasiswa. Memudahkan pengurus untuk menyebarkan berita, agenda kegiatan, dan galeri foto terkini agar mahasiswa selalu mendapatkan informasi terbaru.",
+      description:
+        "Website resmi untuk Badan Eksekutif Mahasiswa. Memudahkan pengurus untuk menyebarkan berita, agenda kegiatan, dan galeri foto terkini agar mahasiswa selalu mendapatkan informasi terbaru.",
       image: bem,
       tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5"],
       featured: true,
@@ -40,7 +40,8 @@ const Portfolio = () => {
     {
       title: "GIS (Geographic Information System) Siswa Kurang Mampu",
       category: "Website",
-      description: "Peta digital interaktif untuk melihat persebaran siswa kurang mampu. Membantu pihak sekolah dan dinas terkait dalam menyalurkan bantuan pendidikan agar lebih tepat sasaran berdasarkan lokasi tempat tinggal siswa.",
+      description:
+        "Peta digital interaktif untuk melihat persebaran siswa kurang mampu. Membantu pihak sekolah dan dinas terkait dalam menyalurkan bantuan pendidikan agar lebih tepat sasaran berdasarkan lokasi tempat tinggal siswa.",
       image: gis,
       tech: ["CodeIgniter 4", "Bootstrap 5", "MySQL"],
       featured: true,
@@ -49,7 +50,8 @@ const Portfolio = () => {
     {
       title: "Web Portfolio",
       category: "Website",
-      description: "Website pribadi yang menampilkan kumpulan karya dan pengalaman saya di bidang web development dan data visualization. Dibuat dengan desain sederhana, cepat diakses, dan mudah dinavigasi.",
+      description:
+        "Website pribadi yang menampilkan kumpulan karya dan pengalaman saya di bidang web development dan data visualization. Dibuat dengan desain sederhana, cepat diakses, dan mudah dinavigasi.",
       image: portfolio,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -58,7 +60,8 @@ const Portfolio = () => {
     {
       title: "Mabel Kanto",
       category: "Website",
-      description: "Website profil perusahaan untuk Mabel Kanto. Menampilkan layanan dan hasil karya perusahaan dengan desain yang elegan untuk meningkatkan citra profesional di mata klien.",
+      description:
+        "Website profil perusahaan untuk Mabel Kanto. Menampilkan layanan dan hasil karya perusahaan dengan desain yang elegan untuk meningkatkan citra profesional di mata klien.",
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -68,7 +71,8 @@ const Portfolio = () => {
     {
       title: "Redesain UI/UX Sigupai Jek",
       category: "Design-UI/UX",
-      description: "Konsep tampilan baru untuk aplikasi Sigupai Jek. Fokus pada kemudahan penggunaan agar pengguna dapat memesan layanan ojek online dengan lebih cepat dan nyaman.",
+      description:
+        "Konsep tampilan baru untuk aplikasi Sigupai Jek. Fokus pada kemudahan penggunaan agar pengguna dapat memesan layanan ojek online dengan lebih cepat dan nyaman.",
       image: redesain,
       tech: ["Figma"],
       featured: true,
@@ -77,7 +81,8 @@ const Portfolio = () => {
     {
       title: "Raoseco Bubur Jongkong",
       category: "Website",
-      description: "Menu digital online untuk usaha kuliner Raoseco. Pelanggan dapat melihat foto makanan yang menarik dan daftar menu dengan mudah melalui HP mereka.",
+      description:
+        "Menu digital online untuk usaha kuliner Raoseco. Pelanggan dapat melihat foto makanan yang menarik dan daftar menu dengan mudah melalui HP mereka.",
       image: bubur,
       tech: ["React", "TailwindCSS"],
       featured: true,
@@ -86,7 +91,8 @@ const Portfolio = () => {
     {
       title: "UI/UX Mobile App PMI Aceh",
       category: "Design-UI/UX",
-      description: "Desain aplikasi HP untuk memudahkan pendonor darah. Membantu pengguna menemukan jadwal donor, lokasi terdekat, dan mencatat riwayat donor mereka.",
+      description:
+        "Desain aplikasi HP untuk memudahkan pendonor darah. Membantu pengguna menemukan jadwal donor, lokasi terdekat, dan mencatat riwayat donor mereka.",
       image: pmi,
       tech: ["Figma"],
       featured: true,
@@ -95,7 +101,8 @@ const Portfolio = () => {
     {
       title: "Dashboard Data Sosial Ekonomi",
       category: "Data Visualization",
-      description: "Tampilan grafik data yang mudah dibaca untuk memantau kondisi sosial ekonomi. Mengubah data angka yang rumit menjadi grafik yang mudah dipahami untuk pengambilan keputusan.",
+      description:
+        "Tampilan grafik data yang mudah dibaca untuk memantau kondisi sosial ekonomi. Mengubah data angka yang rumit menjadi grafik yang mudah dipahami untuk pengambilan keputusan.",
       image: visualisasi,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
@@ -103,8 +110,9 @@ const Portfolio = () => {
     },
     {
       title: "Dashboard HRGS",
-      category: "Data Visualization", 
-      description: "Laporan visual interaktif untuk data HRGS. Membantu manajemen melihat tren dan ringkasan data penting dalam bentuk grafik yang rapi dan update.",
+      category: "Data Visualization",
+      description:
+        "Laporan visual interaktif untuk data HRGS. Membantu manajemen melihat tren dan ringkasan data penting dalam bentuk grafik yang rapi dan update.",
       image: hrgsdasbor,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
       featured: true,
@@ -113,16 +121,18 @@ const Portfolio = () => {
     {
       title: "Sistem POS dan Stock Barang",
       category: "Website",
-      description: "Sistem POS dan Stock Barang yang saya kembangkan untuk membantu pengelolaan penjualan dan stok secara efisien.",
+      description:
+        "Sistem POS dan Stock Barang yang saya kembangkan untuk membantu pengelolaan penjualan dan stok secara efisien.",
       image: posUmkm,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "",
     },
-     {
+    {
       title: "Aplikasi Posyandu Lentera",
-      category: "Website", 
-      description: "Aplikasi untuk posyandu Lentera yang membantu dalam pencatatan data kesehatan anak dan ibu di posyandu Rindam Iskandar muda.",
+      category: "Website",
+      description:
+        "Aplikasi untuk posyandu Lentera yang membantu dalam pencatatan data kesehatan anak dan ibu di posyandu Rindam Iskandar muda.",
       image: lentera,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
@@ -130,27 +140,10 @@ const Portfolio = () => {
     },
     {
       title: "Aplikasi Toko Digital dan stock barang",
-      category: "Website", 
-      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
+      category: "Website",
+      description:
+        "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
       image: tokodigital,
-      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
-      featured: true,
-      link: "",
-    },
-    {
-      title: "spanduk",
-      category: "Website", 
-      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
-      image: spanduk,
-      tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
-      featured: true,
-      link: "",
-    },
-     {
-      title: "spanduk",
-      category: "Website", 
-      description: "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
-      image: artboard,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "",
@@ -193,10 +186,10 @@ const Portfolio = () => {
   };
 
   const itemVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 30,
-      scale: 0.95
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
@@ -250,7 +243,9 @@ const Portfolio = () => {
               className="w-full max-h-80 sm:max-h-96 object-contain rounded-lg mb-4"
               loading="lazy"
             />
-            <h3 className="text-2xl font-bold mb-2 dark:text-white">{selectedProject.title}</h3>
+            <h3 className="text-2xl font-bold mb-2 dark:text-white">
+              {selectedProject.title}
+            </h3>
             <div className="flex flex-wrap gap-2 mb-3">
               {selectedProject.tech.map((tech, idx) => (
                 <span
@@ -261,7 +256,9 @@ const Portfolio = () => {
                 </span>
               ))}
             </div>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">{selectedProject.description}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              {selectedProject.description}
+            </p>
             <div className="flex space-x-4">
               <a
                 href={selectedProject.link}
@@ -278,7 +275,7 @@ const Portfolio = () => {
       )}
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -292,7 +289,7 @@ const Portfolio = () => {
               Beberapa project yang telah saya kerjakan dengan berbagai
               teknologi dan industri
             </p>
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-4 justify-center mb-8"
               initial="hidden"
               whileInView="visible"
@@ -317,7 +314,7 @@ const Portfolio = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -330,15 +327,20 @@ const Portfolio = () => {
                   variants={itemVariants}
                   initial="hidden"
                   animate="visible"
-                  exit={{ opacity: 0, y: 30, scale: 0.95, transition: { duration: 0.3 } }}
+                  exit={{
+                    opacity: 0,
+                    y: 30,
+                    scale: 0.95,
+                    transition: { duration: 0.3 },
+                  }}
                   className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
                     project.featured ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                   onClick={() => setSelectedProject(project)}
                   style={{ cursor: "pointer" }}
-                  whileHover={{ 
+                  whileHover={{
                     y: -8,
-                    transition: { duration: 0.3 }
+                    transition: { duration: 0.3 },
                   }}
                   layout
                 >
