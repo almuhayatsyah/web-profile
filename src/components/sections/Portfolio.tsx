@@ -14,6 +14,7 @@ import hrgsdasbor from "../../asset/img/hrgsdasbor.jpg";
 import posUmkm from "../../asset/img/aplikasi-kasir.jpg";
 import lentera from "../../asset/img/lentera.png";
 import tokodigital from "../../asset/img/tokodigital.png";
+import auliaglow from "../../asset/img/auliaglow.webp";
 
 const Portfolio = () => {
   const projects = [
@@ -147,6 +148,16 @@ const Portfolio = () => {
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
       featured: true,
       link: "",
+    },
+    {
+      title: "Aulia Glow",
+      category: "Website",
+      description:
+        "Aplikasi Kasir untuk brand Aulia Glow, menampilkan produk dan memudahkan pelanggan untuk melakukan pembelian.",
+      image: auliaglow,
+      tech: ["Laravel 12", "MySQL", "Livewire", "TailwindCSS"],
+      featured: true,
+      link: "https://auliaglow.my.id/",
     },
   ];
 
