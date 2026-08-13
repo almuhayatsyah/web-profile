@@ -3,7 +3,6 @@ import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
-import DigitalServices from "./components/sections/DigitalServices";
 import Experience from "./components/sections/Experience";
 import Hero from "./components/sections/Hero";
 import Portfolio from "./components/sections/Portfolio";
@@ -32,7 +31,6 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
-      <DigitalServices />
       <Experience />
       <Contact />
       <Footer />
