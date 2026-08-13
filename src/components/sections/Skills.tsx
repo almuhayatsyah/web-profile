@@ -108,7 +108,7 @@ const Skills = () => {
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 rounded-xl p-8 shadow-lg hover:shadow-xl hover:border-blue-500/30 transition-all duration-300"
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
               >

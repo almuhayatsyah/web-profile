@@ -1,7 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 import profileImg from "../../asset/img/profile.jpg";
 import pdf from "../../asset/pdf/cv.pdf";
-import ReactTypingEffect from 'react-typing-effect';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -28,7 +27,7 @@ const Hero = () => {
             width="144"
             height="144"
           />
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
             Hi, saya <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Almuhayatsyah</span>
             <br />Web Developer & Data Visualization Enthusiast
           </h1>
@@ -41,14 +40,14 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:scale-105 transform transition-all duration-200">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 hover:scale-105 transform transition-all duration-300">
               <a href="#portfolio">View My Work</a>
             </button>
 
             <a
               href={pdf}
               download
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-200 text-center"
+              className="border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm px-8 py-4 rounded-full font-semibold hover:border-blue-600 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 text-center"
             >
               Download CV
             </a>
@@ -57,19 +56,19 @@ const Hero = () => {
           <div className="flex justify-center space-x-6">
             <a
               href="https://github.com/almuhayatsyah"
-              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              className="p-3 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 hover:scale-110 transform transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <Github size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/al-muhayatsyah-7817b1290/"
-              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              className="p-3 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 hover:scale-110 transform transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <Linkedin size={24} />
             </a>
             <a
               href="mailto:almuhayats@gmail.com"
-              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-blue-600"
+              className="p-3 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 hover:scale-110 transform transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <Mail size={24} />
             </a>
@@ -77,7 +76,7 @@ const Hero = () => {
               href="https://wa.me/6281324312332"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl hover:scale-110 transform transition-all duration-200 text-gray-600 dark:text-green-400 hover:text-green-700"
+              className="p-3 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl hover:border-green-400 dark:hover:border-green-500 hover:scale-110 transform transition-all duration-300 text-gray-600 dark:text-green-400 hover:text-green-600 dark:hover:text-green-400"
               title="WhatsApp"
             >
               <Phone size={24} />

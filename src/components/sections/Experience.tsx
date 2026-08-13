@@ -76,7 +76,7 @@ const Experience = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                 >
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 rounded-xl p-8 shadow-lg hover:shadow-xl hover:border-blue-500/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">

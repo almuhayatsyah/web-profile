@@ -55,7 +55,7 @@ const Portfolio = () => {
         "Website pribadi yang menampilkan kumpulan karya dan pengalaman saya di bidang web development dan data visualization. Dibuat dengan desain sederhana, cepat diakses, dan mudah dinavigasi.",
       image: portfolio,
       tech: ["React", "TailwindCSS"],
-      featured: true,
+      featured: false,
       link: "https://github.com/almuhayatsyah/web-profile",
     },
     {
@@ -65,7 +65,7 @@ const Portfolio = () => {
         "Website profil perusahaan untuk Mabel Kanto. Menampilkan layanan dan hasil karya perusahaan dengan desain yang elegan untuk meningkatkan citra profesional di mata klien.",
       image: mabelkanto,
       tech: ["React", "TailwindCSS"],
-      featured: true,
+      featured: false,
       link: "https://web-profile-kanto-mabel.vercel.app/",
     },
 
@@ -76,8 +76,8 @@ const Portfolio = () => {
         "Konsep tampilan baru untuk aplikasi Sigupai Jek. Fokus pada kemudahan penggunaan agar pengguna dapat memesan layanan ojek online dengan lebih cepat dan nyaman.",
       image: redesain,
       tech: ["Figma"],
-      featured: true,
-      link: "https://www.figma.com/proto/your-project-link",
+      featured: false,
+      link: "",
     },
     {
       title: "Raoseco Bubur Jongkong",
@@ -86,7 +86,7 @@ const Portfolio = () => {
         "Menu digital online untuk usaha kuliner Raoseco. Pelanggan dapat melihat foto makanan yang menarik dan daftar menu dengan mudah melalui HP mereka.",
       image: bubur,
       tech: ["React", "TailwindCSS"],
-      featured: true,
+      featured: false,
       link: "https://raoseco-bubur-jongkong.vercel.app/",
     },
     {
@@ -96,8 +96,8 @@ const Portfolio = () => {
         "Desain aplikasi HP untuk memudahkan pendonor darah. Membantu pengguna menemukan jadwal donor, lokasi terdekat, dan mencatat riwayat donor mereka.",
       image: pmi,
       tech: ["Figma"],
-      featured: true,
-      link: "https://www.figma.com/proto/your-pmi-project-link",
+      featured: false,
+      link: "",
     },
     {
       title: "Dashboard Data Sosial Ekonomi",
@@ -106,8 +106,8 @@ const Portfolio = () => {
         "Tampilan grafik data yang mudah dibaca untuk memantau kondisi sosial ekonomi. Mengubah data angka yang rumit menjadi grafik yang mudah dipahami untuk pengambilan keputusan.",
       image: visualisasi,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
-      featured: true,
-      link: "https://lookerstudio.google.com/reporting/your-report-link",
+      featured: false,
+      link: "",
     },
     {
       title: "Dashboard HRGS",
@@ -116,8 +116,8 @@ const Portfolio = () => {
         "Laporan visual interaktif untuk data HRGS. Membantu manajemen melihat tren dan ringkasan data penting dalam bentuk grafik yang rapi dan update.",
       image: hrgsdasbor,
       tech: ["Looker Studio", "Excel", "Google Sheets"],
-      featured: true,
-      link: "https://lookerstudio.google.com/reporting/your-report-link",
+      featured: false,
+      link: "",
     },
     {
       title: "Sistem POS dan Stock Barang",
@@ -126,7 +126,7 @@ const Portfolio = () => {
         "Sistem POS dan Stock Barang yang saya kembangkan untuk membantu pengelolaan penjualan dan stok secara efisien.",
       image: posUmkm,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
-      featured: true,
+      featured: false,
       link: "",
     },
     {
@@ -136,7 +136,7 @@ const Portfolio = () => {
         "Aplikasi untuk posyandu Lentera yang membantu dalam pencatatan data kesehatan anak dan ibu di posyandu Rindam Iskandar muda.",
       image: lentera,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
-      featured: true,
+      featured: false,
       link: "https://lenterarindam-im.com/",
     },
     {
@@ -146,7 +146,7 @@ const Portfolio = () => {
         "Aplikasi untuk toko digital dan pengelolaan stok barang yang membantu dalam pencatatan data stok secara real-time.",
       image: tokodigital,
       tech: ["Laravel 12", "MySQL", "Bootstrap 5"],
-      featured: true,
+      featured: false,
       link: "",
     },
     {
@@ -239,8 +239,8 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 bg-white dark:bg-gray-900">
       {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-lg w-full p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="bg-white/90 dark:bg-gray-900/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/50 rounded-2xl shadow-2xl max-w-lg w-full p-6 relative">
             <button
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
               onClick={() => setSelectedProject(null)}
@@ -270,17 +270,19 @@ const Portfolio = () => {
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {selectedProject.description}
             </p>
-            <div className="flex space-x-4">
-              <a
-                href={selectedProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-6 py-3 rounded-full hover:opacity-90 transition-colors flex items-center gap-2 font-medium"
-              >
-                <span>Telusuri Project</span>
-                {getProjectIcon(selectedProject.category, selectedProject.tech)}
-              </a>
-            </div>
+            {selectedProject.link && (
+              <div className="flex space-x-4">
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-6 py-3 rounded-full hover:opacity-90 transition-colors flex items-center gap-2 font-medium"
+                >
+                  <span>Telusuri Project</span>
+                  {getProjectIcon(selectedProject.category, selectedProject.tech)}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -311,11 +313,11 @@ const Portfolio = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2 rounded-full font-semibold border transition-colors duration-200
+                  className={`px-5 py-2 rounded-full font-semibold border backdrop-blur-sm transition-all duration-300
                     ${
                       activeCategory === cat
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-white text-blue-600 border-blue-600 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-400"
+                        ? "bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-500/30"
+                        : "bg-white/70 text-blue-600 border-blue-200 dark:bg-gray-800/70 dark:text-blue-400 dark:border-blue-900 hover:border-blue-500/80"
                     }
                   `}
                 >
@@ -344,7 +346,7 @@ const Portfolio = () => {
                     scale: 0.95,
                     transition: { duration: 0.3 },
                   }}
-                  className={`group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ${
+                  className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/30 transition-all duration-300 ${
                     project.featured ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                   onClick={() => setSelectedProject(project)}
@@ -371,16 +373,20 @@ const Portfolio = () => {
                     )}
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-4">
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium text-sm flex items-center gap-2"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <span>Telusuri</span>
-                          {getProjectIcon(project.category, project.tech)}
-                        </a>
+                        {project.link ? (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-gray-900 px-6 py-3 rounded-full hover:bg-gray-100 transition-colors font-medium text-sm flex items-center gap-2"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <span>Telusuri</span>
+                            {getProjectIcon(project.category, project.tech)}
+                          </a>
+                        ) : (
+                          <span className="bg-white/90 text-gray-500 px-6 py-3 rounded-full font-medium text-sm">Lihat Detail</span>
+                        )}
                       </div>
                     </div>
                   </div>

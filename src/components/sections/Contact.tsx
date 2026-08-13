@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // ...existing code...
 
 const Contact = () => {
-  // Form dan handler dihapus karena tidak digunakan lagigit
+  // Form dan handler dihapus karena tidak digunakan lagi
 
   const contactInfo = [
     {
@@ -31,13 +31,13 @@ const Contact = () => {
     {
       icon: <Github size={24} />,
       name: "GitHub",
-      link: "https://github.com",
+      link: "https://github.com/almuhayatsyah",
       color: "hover:text-gray-900",
     },
     {
       icon: <Linkedin size={24} />,
       name: "LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/al-muhayatsyah-7817b1290/",
       color: "hover:text-blue-600",
     },
     {
@@ -80,7 +80,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
+              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 rounded-xl p-8 shadow-lg"
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 Contact Information

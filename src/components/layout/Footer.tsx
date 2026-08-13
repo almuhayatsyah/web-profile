@@ -82,15 +82,15 @@ const Footer = () => {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2025 Almuhayatsyah. All rights reserved.
+                © {new Date().getFullYear()} Almuhayatsyah. All rights reserved.
               </p>
               <div className="flex items-center text-gray-400 text-sm">
-                <span>Made</span>
+                <span>Made with</span>
                 <Heart size={16} className="mx-2 text-red-500" />
                 <span>
-                  made in {""}
+                  in{" "}
                   <a
-                    href=""
+                    href="#home"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Aceh
@@ -106,3 +106,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
